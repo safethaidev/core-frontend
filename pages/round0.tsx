@@ -51,7 +51,8 @@ export default function Round0(props) {
     <div className="text-white">
       <div className="flex flex-col items-center my-4">
         <div className="text-4xl mb-2">Round 0</div>
-        <div className="text-lg">รอบสำหรับผู้ศรัทธา</div>
+        <div className="text-lg mb-2">รอบสำหรับผู้ศรัทธา</div>
+        <div className="text-lg mb-2">เฉพาะรอบรอบนี้ 50% LP, 50% Dev</div>
       </div>
 
       {loading ? (
