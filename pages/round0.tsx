@@ -2,6 +2,7 @@ import { useWeb3React } from "@web3-react/core";
 import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import ConnectWalletButton from "../components/ConnectWalletButton";
 import { web3 } from "../utils/web3";
 
 function numberWithCommas(x) {
@@ -14,7 +15,7 @@ export default function Round0(props) {
   const [loading, setLoading] = useState(true);
   const [bnbBalance, setBnbBalance] = useState(0);
   const [bnbAmount, setBnbAmount] = useState("");
-  const { account } = useWeb3React();
+  const { account, active } = useWeb3React();
 
   let remainingBnb = Math.max(0, 10 - bnbBalance);
   let remainingToLaunch = Math.max(0, 0.25 - bnbBalance);
@@ -62,15 +63,20 @@ export default function Round0(props) {
           <div className="flex flex-col items-center my-4 mt-8">
             <div className="text-3xl mb-3">คงเหลือ</div>
             <div className="text-lg mb-2">
-              {numberWithCommas(Math.floor(remainingBnb * MULTIPLIER))} MSafeThai
+              {numberWithCommas(Math.floor(remainingBnb * MULTIPLIER))}{" "}
+              MSafeThai
             </div>
             <div className="text-lg mb-2">{remainingBnb} BNB</div>
-            <div className="text-lg mb-2">จำกัดการซื้อ 1 BNB ถ้าซื้อเกินคุณจะเสียเงินฟรี</div>
+            <div className="text-lg mb-2">
+              จำกัดการซื้อ 1 BNB ถ้าซื้อเกินคุณจะเสียเงินฟรี
+            </div>
           </div>
 
           <div className="flex flex-col items-center my-4">
             <div className="text-lg mb-1">
-              {remainingToLaunch > 0 ? "ต้องการอีก " + remainingToLaunch + " BNB เพื่อ Launch" : "รอการ Launch เร็วๆนี้"}
+              {remainingToLaunch > 0
+                ? "ต้องการอีก " + remainingToLaunch + " BNB เพื่อ Launch"
+                : "รอการ Launch เร็วๆนี้"}
             </div>
           </div>
 
@@ -132,39 +138,45 @@ export default function Round0(props) {
               </div>
 
               <div className="my-3">
-                <button
-                  className="bg-white hover:bg-gray-200 text-black px-8 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-lg"
-                  onClick={async () => {
-                    let bnbAmountFloat = parseFloat(bnbAmount);
+                {active ? (
+                  <button
+                    className="bg-white hover:bg-gray-200 text-black px-8 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-lg"
+                    onClick={async () => {
+                      let bnbAmountFloat = parseFloat(bnbAmount);
 
-                    if (!bnbAmountFloat || bnbAmountFloat < 0) {
-                      alert("จำนวนเหรียญไม่ถูกต้อง");
-                      return;
-                    }
+                      if (!bnbAmountFloat || bnbAmountFloat < 0) {
+                        alert("จำนวนเหรียญไม่ถูกต้อง");
+                        return;
+                      }
 
-                    if (bnbAmountFloat > 1) {
-                      alert("จำกัดการซื้อไม่เกิน 1 BNB");
-                      return;
-                    }
+                      if (bnbAmountFloat > 1) {
+                        alert("จำกัดการซื้อไม่เกิน 1 BNB");
+                        return;
+                      }
 
-                    if (bnbAmountFloat > remainingBnb) {
-                      alert("คุณซื้อมากเกินไป หรือ Round 0 ขายหมดแล้ว");
-                      return;
-                    }
+                      if (bnbAmountFloat > remainingBnb) {
+                        alert("คุณซื้อมากเกินไป หรือ Round 0 ขายหมดแล้ว");
+                        return;
+                      }
 
-                    await web3.eth.sendTransaction({
-                      to: WALLET_ADDRESS,
-                      from: account,
-                      value: web3.utils.toWei(bnbAmount, "ether"),
-                    });
-                  }}
-                >
-                  ซื้อเลย
-                </button>
+                      await web3.eth.sendTransaction({
+                        to: WALLET_ADDRESS,
+                        from: account,
+                        value: web3.utils.toWei(bnbAmount, "ether"),
+                      });
+                    }}
+                  >
+                    ซื้อเลย
+                  </button>
+                ) : (
+                  <ConnectWalletButton></ConnectWalletButton>
+                )}
               </div>
 
               <div className="my-8">
-                <div className="text-lg mb-4">ซื้อเสร็จแล้วก็ล่า Airdrop ต่อเลย</div>
+                <div className="text-lg mb-4">
+                  ซื้อเสร็จแล้วก็ล่า Airdrop ต่อเลย
+                </div>
               </div>
 
               <Link href="/airdrop">

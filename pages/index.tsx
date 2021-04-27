@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="px-2">
       <Head>
-        <title>SafeThai - Defi ไทยก้าวไกลสู่ระดับโลก - สร้างขึ้นจากความร่วมมือของ Dev และชุมชนชาวไทย</title>
+        <title>SafeThai - ช่วย Defi ไทยใบนี้ไว้ - Defi Venture Capital สำหรับคนไทย</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -23,8 +23,8 @@ export default function Home() {
               }}></img>
             </div>
 
-            <div className="text-4xl text-center mb-2">SafeThai - ช่วย Defi ไทยใบนี้ไว้</div>
-            <div className="text-2xl text-center mb-4">Defi Venture Capital สำหรับคนไทย</div>
+            <div className="text-4xl text-center mb-2 text-yellow-200">SafeThai - ช่วย Defi ไทยใบนี้ไว้</div>
+            <div className="text-2xl text-center mb-4 text-yellow-200">Defi Venture Capital สำหรับคนไทย</div>
             <div className="text-xl text-center mb-1">Buy &amp; HODL SafeThai ตอนนี้</div>
             <div className="text-xl text-center mb-1">SafeThai ลงทุนในโปรเจคใหม่คนไทย</div>
             <div className="text-xl text-center mb-1">โปรเจคเหล่านั้นให้ผลตอบแทนแก่คนที่ HODL</div>
@@ -32,7 +32,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center my-5">
-            <div className="text-2xl my-3">Round 0</div>
+            <div className="text-2xl my-3 text-yellow-200">Round 0</div>
 
             <div className="my-3 text-center text-xl">
               <div>4,000,000 MSafeThai</div>
@@ -93,7 +93,7 @@ export default function Home() {
       {/* Knowledge */}
       <div className="bg-gray-800 text-white">
         <div className="container mx-auto pt-8 md:pt-12">
-          <div className="text-center text-3xl mb-4">แหล่งความรู้เกี่ยวกับ Defi</div>
+          <div className="text-center text-3xl mb-4 text-yellow-200">แหล่งความรู้เกี่ยวกับ Defi</div>
         </div>
       </div>
 
@@ -106,7 +106,7 @@ export default function Home() {
       {/* Sponsored Project */}
       <div className="bg-gray-800 text-white">
         <div className="container mx-auto pt-8 md:pt-12">
-          <div className="text-center text-3xl mb-4">โปรเจค/ผู้คนที่ได้รับการสนับสนุนเงินทุน</div>
+          <div className="text-center text-3xl mb-4 text-yellow-200">โปรเจค/ผู้คนที่ได้รับการสนับสนุนเงินทุน</div>
           <div className="text-center mb-2">* ไม่มีส่วนเกี่ยวข้องในการพัฒนา SafeThai</div>
           {/* <div className="text-center">* เน้นเฉพาะโปรเจคที่มีอนาคต / Dev ฝีมือดี แต่ไม่ค่อยมีเงิน</div> */}
         </div>
@@ -131,7 +131,7 @@ export default function Home() {
       {/* Roadmap */}
       <div className="bg-gray-800 text-white">
         <div className="container mx-auto pt-8 md:pt-12">
-          <div className="text-center text-3xl">ถนนสู่ดวงจันทร์</div>
+          <div className="text-center text-3xl text-yellow-200">ถนนสู่ดวงจันทร์</div>
         </div>
       </div>
 
@@ -206,7 +206,7 @@ export default function Home() {
       {/* Tokenomics */}
       <div className="bg-gray-800 text-white" id="products">
         <div className="container mx-auto pt-8 md:pt-12 mt-8 md:mt-12">
-          <div className="text-center text-3xl">ทุกการทำธุรกรรม</div>
+          <div className="text-center text-3xl text-yellow-200">ทุกการทำธุรกรรม</div>
         </div>
       </div>
 
@@ -215,12 +215,12 @@ export default function Home() {
           <div className="flex justify-around flex-col md:flex-row">
             <div className="my-4 text-center">
               <div className="text-3xl mb-3">Liquidity</div>
-              <div className="text-xl">5%</div>
+              <div className="text-xl">4%</div>
             </div>
 
             <div className="my-4 text-center">
               <div className="text-3xl mb-3">Reflection</div>
-              <div className="text-xl">1%</div>
+              <div className="text-xl">2%</div>
             </div>
 
             <div className="my-4 text-center">
@@ -249,8 +249,8 @@ export default function Home() {
       </div>
 
       <div className="bg-gray-800 text-white" id="products">
-        <div className="container mx-auto pt-8 md:pt-12">
-          <div className="text-center text-3xl">การกระจายเหรียญ</div>
+        <div className="container mx-auto pt-16 md:pt-24">
+          <div className="text-center text-3xl text-yellow-200">การกระจายเหรียญ</div>
         </div>
       </div>
 
@@ -290,7 +290,7 @@ export default function Home() {
 
       <div className="bg-gray-800 text-white" id="products">
         <div className="container mx-auto pt-8 md:pt-12">
-          <div className="text-center text-3xl">เงินที่ได้จากการขายไปไหน</div>
+          <div className="text-center text-3xl text-yellow-200">เงินที่ได้จากการขายไปไหน</div>
         </div>
       </div>
 
@@ -300,7 +300,7 @@ export default function Home() {
             <div className="my-4 text-center">
               <div className="text-3xl mb-3">50%</div>
               <div className="text-xl mb-2">Provide liquidity</div>
-              <div className="text-xl mb-2">และ Lock ไว้ 4 เดือน</div>
+              <div className="text-xl mb-2">และ Burn ทิ้งทันที</div>
             </div>
 
             <div className="my-4 text-center">
@@ -321,6 +321,30 @@ export default function Home() {
       <div className="text-center my-4 text-white">
         <div className="text-xl mb-3">เฉพาะส่วนของ BNB เท่านั้น</div>
         <div className="text-xl">ส่วนของ SafeThai จะถูกเผาทำลายทิ้ง</div>
+      </div>
+
+      <div className="bg-gray-800 text-white" id="products">
+        <div className="container mx-auto pt-12 md:pt-16">
+          <div className="text-center text-3xl text-yellow-200">ใครเป็นคนสร้าง</div>
+        </div>
+      </div>
+
+      <div className="text-center my-4 text-white">
+        <div className="text-lg mb-2">สามารถส่งข้อความมาถามที่</div>
+        <div className="text-lg mb-2"><a className="underline" href="https://www.facebook.com/SafeThaiFinance" target="_blank">Inbox ของเพจ SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></div>
+        <div className="text-lg mb-4">ก่อนเปิดขาย Round 1</div>
+        <div className="text-lg mb-4">นอกจากนั้นถ้าหาก Dev ว่างจะมานั่งคุยใน <a className="underline" href="https://discord.gg/3nzFyJq6gd" target="_blank">Voice channel ใน Discord</a> ด้วย</div>
+      </div>
+
+      <div className="bg-gray-800 text-white" id="products">
+        <div className="container mx-auto pt-12 md:pt-16">
+          <div className="text-center text-3xl text-yellow-200">Scam ไหม</div>
+        </div>
+      </div>
+
+      <div className="text-center my-4 text-white">
+        <div className="text-lg mb-2">ไม่ Scam แน่นอนเพราะมีคนรู้หน้าของคนสร้าง</div>
+        <div className="text-xl mb-2">ไม่งั้นบ้านโดนระเบิดแน่</div>
       </div>
 
       <div className="bg-gray-800 text-white">
