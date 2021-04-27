@@ -8,7 +8,7 @@ function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-const WALLET_ADDRESS = "0x3beb93Cd777EAab48d09d37A80e00853f9A2a895";
+const WALLET_ADDRESS = "0x41d10B48d99f49f1573769E1308f1A76ee5472b0";
 
 export default function Round0(props) {
   const [loading, setLoading] = useState(true);
@@ -16,7 +16,10 @@ export default function Round0(props) {
   const [bnbAmount, setBnbAmount] = useState("");
   const { account } = useWeb3React();
 
-  let remainingBnb = Math.max(0, 25 - bnbBalance);
+  let remainingBnb = Math.max(0, 10 - bnbBalance);
+  let remainingToLaunch = Math.max(0, 0.25 - bnbBalance);
+
+  const MULTIPLIER = 4000000 / 10;
 
   // Polling to get wallet balance
   async function getWalletBalance(polling = false) {
@@ -53,14 +56,21 @@ export default function Round0(props) {
 
       {loading ? (
         <div className="text-3xl my-12 text-center">กำลังโหลด...</div>
-      ) : (
+      ) : remainingBnb > 0 ? (
         <>
           <div className="flex flex-col items-center my-4 mt-8">
             <div className="text-3xl mb-3">คงเหลือ</div>
             <div className="text-lg mb-2">
-              {numberWithCommas(Math.floor(remainingBnb * 40000))} MSafeThai
+              {numberWithCommas(Math.floor(remainingBnb * MULTIPLIER))} MSafeThai
             </div>
             <div className="text-lg mb-2">{remainingBnb} BNB</div>
+            <div className="text-lg mb-2">จำกัดการซื้อ 1 BNB ถ้าซื้อเกินคุณจะเสียเงินฟรี</div>
+          </div>
+
+          <div className="flex flex-col items-center my-4">
+            <div className="text-lg mb-1">
+              {remainingToLaunch > 0 ? "ต้องการอีก " + remainingToLaunch + " BNB เพื่อ Launch" : "รอการ Launch เร็วๆนี้"}
+            </div>
           </div>
 
           <div className="flex flex-col items-center my-4">
@@ -85,7 +95,7 @@ export default function Round0(props) {
             }}
           >
             <label className="block text-sm font-medium text-white mb-3">
-              ต้องการซื้อ
+              ต้องการซื้อ (สูงสุด 1 BNB ถ้าซื้อเกินคุณจะเสียเงินฟรี)
             </label>
             <div className="mt-1 relative rounded-md shadow-sm">
               {/* <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -99,7 +109,7 @@ export default function Round0(props) {
                 name="price"
                 id="price"
                 className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-4 pr-12 py-3 sm:text-sm border-gray-300 rounded-md text-black"
-                placeholder="0.00"
+                placeholder="1.00"
               ></input>
               <div className="absolute inset-y-0 right-0 flex items-center text-black pr-4">
                 <div>BNB</div>
@@ -112,7 +122,7 @@ export default function Round0(props) {
               <div className="text-lg mb-1">
                 ได้รับ{" "}
                 {numberWithCommas(
-                  Math.floor(parseFloat(bnbAmount || "0") * 40000)
+                  Math.floor(parseFloat(bnbAmount || "0") * MULTIPLIER)
                 )}
                 ,000,000 SafeThai
               </div>
@@ -131,6 +141,16 @@ export default function Round0(props) {
                       return;
                     }
 
+                    if (bnbAmountFloat > 1) {
+                      alert("จำกัดการซื้อไม่เกิน 1 BNB");
+                      return;
+                    }
+
+                    if (bnbAmountFloat > remainingBnb) {
+                      alert("คุณซื้อมากเกินไป หรือ Round 0 ขายหมดแล้ว");
+                      return;
+                    }
+
                     await web3.eth.sendTransaction({
                       to: WALLET_ADDRESS,
                       from: account,
@@ -141,11 +161,35 @@ export default function Round0(props) {
                   ซื้อเลย
                 </button>
               </div>
+
+              <div className="my-8">
+                <div className="text-lg mb-4">ซื้อเสร็จแล้วก็ล่า Airdrop ต่อเลย</div>
+              </div>
+
+              <Link href="/airdrop">
+                <button className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl">
+                  <div>ล่า Airdrop</div>
+                </button>
+              </Link>
             </div>
           ) : (
             <div></div>
           )}
         </>
+      ) : (
+        <div className="flex flex-col items-center text-center">
+          <div className="my-8">
+            <div className="text-3xl mb-4">ขายหมดแล้ว</div>
+            <div className="text-lg mb-2">ล่า Airdrop แล้วเข้ากลุ่ม</div>
+            <div className="text-lg mb-2">แล้วรอซื้อ Round 1 เลย</div>
+          </div>
+
+          <Link href="/airdrop">
+            <button className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl">
+              <div>ล่า Airdrop</div>
+            </button>
+          </Link>
+        </div>
       )}
     </div>
   );
