@@ -733,7 +733,10 @@ contract SafeThai is Context, IERC20, Ownable {
     event SwapAndLiquify(
         uint256 tokensSwapped,
         uint256 ethReceived,
-        uint256 tokensIntoLiqudity
+        uint256 tokensIntoLiqudity,
+        uint256 burnedToken,
+        uint256 fundManagerBalance,
+        uint256 devBalance
     );
     
     modifier lockTheSwap {
@@ -743,9 +746,11 @@ contract SafeThai is Context, IERC20, Ownable {
     }
     
     address payable public fundManager;
+    address payable public devAddress;
     
     constructor () public {
         fundManager = payable(_msgSender());
+        devAddress = payable(_msgSender());
         _rOwned[_msgSender()] = _rTotal;
         
         IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F);
@@ -769,6 +774,14 @@ contract SafeThai is Context, IERC20, Ownable {
         require(msg.sender == fundManager, "Not FundManager");
         emit SetFundManager(fundManager, _fundManager);
         fundManager = _fundManager;
+    }
+
+    event SetDevAddress(address indexed oldDevAddress, address indexed newDevAddress);
+    
+    function setDevAddress(address payable _devAddress) public {
+        require(msg.sender == devAddress, "Not Dev");
+        emit SetDevAddress(devAddress, _devAddress);
+        devAddress = _devAddress;
     }
 
     function name() public view returns (string memory) {
@@ -1059,6 +1072,10 @@ contract SafeThai is Context, IERC20, Ownable {
         // split the contract balance into halves
         uint256 half = contractTokenBalance.div(2) + contractTokenBalance.div(4);
         uint256 otherHalf = contractTokenBalance.sub(half);
+        uint256 burnedToken = contractTokenBalance.div(8);
+
+        // Burn 1% of token
+        transfer(0x000000000000000000000000000000000000dEaD, burnedToken);
 
         // capture the contract's current ETH balance.
         // this is so that we can capture exactly the amount of ETH that the
@@ -1067,20 +1084,25 @@ contract SafeThai is Context, IERC20, Ownable {
         uint256 initialBalance = address(this).balance;
 
         // swap tokens for ETH
-        swapTokensForEth(half); // <- this breaks the ETH -> HATE swap when swap+liquify is triggered
+        swapTokensForEth(half - burnedToken); // <- this breaks the ETH -> HATE swap when swap+liquify is triggered
 
         // how much ETH did we just swap into?
         uint256 newBalance = address(this).balance.sub(initialBalance);
-        
-        // transfer some amount to fundManager
-        uint256 halfNewBalance = newBalance.div(2);
-        fundManager.transfer(halfNewBalance);
-        newBalance -= halfNewBalance;
 
         // add liquidity to uniswap
-        addLiquidity(otherHalf, newBalance);
+        uint256 forLpBalance = newBalance.mul(4).div(7);
+        addLiquidity(otherHalf, forLpBalance);
+
+        // transfer some amount to fundManager
+        // uint256 fundManagerBalance = newBalance.mul(2).div(7);
+        uint256 fundManagerBalance = forLpBalance.div(2); // Save gas
+        fundManager.transfer(fundManagerBalance);
         
-        emit SwapAndLiquify(half, newBalance, otherHalf);
+        // transfer some amount to dev
+        uint256 devBalance = newBalance.sub(forLpBalance + fundManagerBalance);
+        devAddress.transfer(devBalance);
+
+        emit SwapAndLiquify(half, forLpBalance, otherHalf, burnedToken, fundManagerBalance, devBalance);
     }
 
     function swapTokensForEth(uint256 tokenAmount) private {

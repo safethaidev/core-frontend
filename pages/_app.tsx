@@ -30,6 +30,8 @@ function MyApp({ Component, pageProps }) {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <link rel="icon" href="/safethai.png" />
+          <title>SafeThai - ช่วย Defi ไทยใบนี้ไว้ - Defi Venture Capital สำหรับคนไทย</title>
         </Head>
 
         <Header></Header>

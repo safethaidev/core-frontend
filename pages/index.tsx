@@ -43,7 +43,6 @@ export default function Home() {
     <div className="px-2">
       <Head>
         <title>SafeThai - ช่วย Defi ไทยใบนี้ไว้ - Defi Venture Capital สำหรับคนไทย</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {/* Introduction block */}
@@ -57,7 +56,8 @@ export default function Home() {
             </div>
 
             <div className="text-4xl text-center mb-2 text-yellow-200">SafeThai - ช่วย Defi ไทยใบนี้ไว้</div>
-            <div className="text-2xl text-center mb-4 text-yellow-200">Defi Venture Capital สำหรับคนไทย</div>
+            <div className="text-2xl text-center mb-2 text-yellow-200">Defi Venture Capital สำหรับคนไทย</div>
+            <div className="text-2xl text-center mb-4 text-yellow-200">และเป็นแหล่งรวมคอนเทนต์ต่างๆของคนไทย</div>
             <div className="text-xl text-center mb-1">Buy &amp; HODL SafeThai ตอนนี้</div>
             <div className="text-xl text-center mb-1">SafeThai ลงทุนในโปรเจคใหม่คนไทย</div>
             <div className="text-xl text-center mb-1">โปรเจคเหล่านั้นให้ผลตอบแทนแก่คนที่ HODL</div>
@@ -126,7 +126,7 @@ export default function Home() {
       {/* Knowledge */}
       <div className="bg-gray-800 text-white">
         <div className="container mx-auto pt-8 md:pt-12">
-          <div className="text-center text-3xl mb-4 text-yellow-200">แหล่งความรู้สำหรับ Defi</div>
+          <div className="text-center text-3xl mb-4 text-yellow-200">แหล่งความรู้สำหรับ Defi ไทย</div>
         </div>
       </div>
 
@@ -184,19 +184,27 @@ export default function Home() {
             <div className="mb-8">
               <div className="text-lg mb-1">เปิดพื้นที่ให้ชาวไทยประชาสัมพันธ์ Project และ Community ต่างๆ</div>
               <div className="mb-2">เมษายน 2564</div>
-              <div>โดยผู้ที่ Submit ก่อนจะได้การมองเห็นที่ดีกว่า</div>
+              <div>ในช่วงแรกจะทำการรวบรวมข้อมูลเองก่อน แล้วจึงนำข้อมูลจากผู้ที่กรอกฟอร์มมาแสดงเพิ่ม</div>
             </div>
           </TimelineItem>
 
           <TimelineItem index={1}>
             <div className="mb-8">
-              <div className="text-lg mb-1">เปิดขายผ่านหน้าเว็บ</div>
-              <div className="mb-2">เมษายน 2564</div>
-              <div>รอบ 0 และ 1 จำเป็นต้องซื้อผ่านหน้าเว็บ สำหรับรอบอื่นๆสามารถซื้อผ่านหน้าเว็บได้ตลอดถ้าราคาถูกกว่า PancakeSwap</div>
+              <div className="text-lg mb-1">Testnet &amp; Community Audits</div>
+              <div className="mb-2">สัปดาห์แรก พฤษภาคม 2564</div>
+              <div>เปิด Testnet เพื่อให้ Community มาทดสอบ วิจารณ์ Code และเขียน Audit report</div>
             </div>
           </TimelineItem>
 
           <TimelineItem index={2}>
+            <div className="mb-8">
+              <div className="text-lg mb-1">เปิดขายผ่านหน้าเว็บ</div>
+              <div className="mb-2">สัปดาห์แรก พฤษภาคม 2564</div>
+              <div>รอบ 0 จำเป็นต้องซื้อผ่านหน้าเว็บ สำหรับรอบอื่นๆสามารถซื้อผ่านหน้าเว็บได้ตลอดถ้าราคาถูกกว่า PancakeSwap</div>
+            </div>
+          </TimelineItem>
+
+          <TimelineItem index={3}>
             <div className="mb-8">
               <div className="text-lg mb-1">เปิดขายผ่าน PancakeSwap</div>
               <div className="mb-2">เมษายน 2564</div>
@@ -204,23 +212,23 @@ export default function Home() {
             </div>
           </TimelineItem>
 
-          <TimelineItem index={3}>
+          <TimelineItem index={4}>
             <div className="mb-8">
               <div className="text-lg mb-1">List บนเว็บไซต์อื่นๆ</div>
-              <div className="mb-2">พฤษภาคม 2021</div>
+              <div className="mb-2">เมษายน - พฤษภาคม 2021</div>
               <div>อย่างเช่น Dex.guru, PooCoin และ Coinmarketcap</div>
             </div>
           </TimelineItem>
 
-          <TimelineItem index={4}>
+          <TimelineItem index={5}>
             <div className="mb-8">
               <div className="text-lg mb-1">ก้าวไกลสู่ระดับโลก</div>
               <div className="mb-2">พฤษภาคม 2021</div>
-              <div>นำแนวคิดนี้ไปสร้างเว็บไซต์ระดับโลก โดยสร้างเหรียญใหม่ที่สร้างจากทีม SafeThai แล้วทำการนำ Funding ที่ได้รับส่วนหนึ่งมา Buyback &amp; Burn และ การันตีราคาขั้นต่ำของ SafeThai ต่อ</div>
+              <div>นำแนวคิดนี้ไปสร้างเว็บไซต์ระดับโลก โดยสร้างเหรียญใหม่ที่สร้างจากทีม SafeThai แล้วทำการนำ Funding ที่ได้รับส่วนหนึ่งมา Buyback &amp; Burn</div>
             </div>
           </TimelineItem>
 
-          <TimelineItem index={5}>
+          <TimelineItem index={6}>
             <div className="mb-8 text-yellow-200">
               <div className="text-xl mb-1">เป็นแหล่งรวม Community และโปรเจคของคนไทย</div>
               <div className="text-lg mb-2">พฤษภาคม 2021</div>
@@ -228,7 +236,7 @@ export default function Home() {
             </div>
           </TimelineItem>
 
-          <TimelineItem index={6}>
+          <TimelineItem index={7}>
             <div className="mb-8">
               <div className="text-lg mb-1">ขายบน CEX</div>
               <div className="mb-2">ตั้งแต่ พฤษภาคม 2021</div>
@@ -236,7 +244,7 @@ export default function Home() {
             </div>
           </TimelineItem>
 
-          <TimelineItem index={7}>
+          <TimelineItem index={8}>
             <div className="mb-8">
               <div className="text-lg mb-1">สนับสนุน Defi ไทย ได้อย่างเต็มกำลัง</div>
               <div className="mb-2">ตั้งแต่ พฤษภาคม 2021</div>
@@ -244,7 +252,7 @@ export default function Home() {
             </div>
           </TimelineItem>
 
-          <TimelineItem index={8}>
+          <TimelineItem index={9}>
             <div className="mb-8">
               <div className="text-lg mb-2">ก้าวไกลสู่ Chain อื่น</div>
               <div className="mb-2">2022</div>
@@ -293,10 +301,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="text-center my-4 text-white">
+        {/* <div className="text-center my-4 text-white">
           <div className="text-xl mb-3">เฉพาะส่วนของ BNB เท่านั้น</div>
           <div className="text-xl">ส่วนของ SafeThai จะถูกเผาทำลายทิ้ง</div>
-        </div>
+        </div> */}
       </div>
 
       <div className="bg-gray-800 text-white" id="products">
@@ -326,6 +334,7 @@ export default function Home() {
 
           <div className="text-center my-4 mb-8">
             <div className="text-lg mb-2">Round 0 ขายแค่ 2,000,000M = 10 BNB</div>
+            <div className="text-lg mb-2">เฉพาะ Round 0 นำไปใช้ 50% LP, 50% Dev</div>
             <div className="text-lg mb-2">ไม่มี Dev Token ปลอดภัยต่อการ Rug Pull</div>
             <div className="text-lg mb-2">ทุกเหรียญจะถูก Lock ไว้ใน Contract พิเศษ</div>
           </div>

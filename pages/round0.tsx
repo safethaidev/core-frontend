@@ -18,7 +18,7 @@ export default function Round0(props) {
   const { account, active } = useWeb3React();
 
   let remainingBnb = Math.max(0, 10 - bnbBalance);
-  let remainingToLaunch = Math.max(0, 0.25 - bnbBalance);
+  let remainingToLaunch = Math.max(0, 1 - bnbBalance);
 
   const MULTIPLIER = 4000000 / 10;
 
@@ -52,7 +52,6 @@ export default function Round0(props) {
     <div className="text-white">
       <Head>
         <title>SafeThai - ซื้อเหรียญต้นน้ำ เพื่อช่วย Defi ไทยใบนี้ไว้</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="flex flex-col items-center my-4">
@@ -106,8 +105,8 @@ export default function Round0(props) {
               maxWidth: 420,
             }}
           >
-            <label className="block text-sm font-medium text-white mb-3">
-              ต้องการซื้อ (สูงสุด 1 BNB ถ้าซื้อเกินคุณจะเสียเงินฟรี)
+            <label className="block text-sm font-medium text-white mb-3 text-lg">
+              ต้องการซื้อ
             </label>
             <div className="mt-1 relative rounded-md shadow-sm">
               {/* <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

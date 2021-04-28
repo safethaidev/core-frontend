@@ -11,13 +11,12 @@ export default function Airdrop(props) {
   const HeadSection = (
     <Head>
       <title>SafeThai - แจก Airdrop เพื่อช่วย Defi ไทยใบนี้ไว้</title>
-      <link rel="icon" href="/favicon.ico" />
     </Head>
   )
 
   if (!active) {
     return (
-      <div className="px-2 md:px-8 container text-white">
+      <div className="px-2 md:px-8 container text-white mx-auto">
         <div className="my-8">
           <div className="text-3xl">SafeThai Airdrop</div>
         </div>
