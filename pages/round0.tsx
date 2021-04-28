@@ -67,9 +67,9 @@ export default function Round0(props) {
               MSafeThai
             </div>
             <div className="text-lg mb-2">{remainingBnb} BNB</div>
-            <div className="text-lg mb-2">
+            {/* <div className="text-lg mb-2">
               จำกัดการซื้อ 1 BNB ถ้าซื้อเกินคุณจะเสียเงินฟรี
-            </div>
+            </div> */}
           </div>
 
           <div className="flex flex-col items-center my-4">
@@ -149,10 +149,11 @@ export default function Round0(props) {
                         return;
                       }
 
-                      if (bnbAmountFloat > 1) {
-                        alert("จำกัดการซื้อไม่เกิน 1 BNB");
-                        return;
-                      }
+                      // ไม่มีประโยชน์ยังไงวาฬก็ซื้อได้ แค่ใช้หลาย Wallet
+                      // if (bnbAmountFloat > 1) {
+                      //   alert("จำกัดการซื้อไม่เกิน 1 BNB");
+                      //   return;
+                      // }
 
                       if (bnbAmountFloat > remainingBnb) {
                         alert("คุณซื้อมากเกินไป หรือ Round 0 ขายหมดแล้ว");

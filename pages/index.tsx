@@ -1,7 +1,40 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import React, { useState } from 'react';
+import AvatarLinkList from '../components/AvatarLinkList';
 import TimelineItem from '../components/TimelineItem'
+
+const PREVIEW_CONTENT = [
+  {
+    img: "/img/content/pages/newgen.jpg",
+    title: "Blockchain The New Gen",
+    href: "https://www.facebook.com/BlockchainNewGen",
+  },
+  {
+    img: "/img/content/pages/blockchainreview.jpg",
+    title: "Blockchain Review",
+    href: "https://www.facebook.com/blockchainreviewth",
+  },
+  {
+    img: "/img/content/groups/defikanmai.jpg",
+    title: "defi กันไหมวัยรุ่น",
+    href: "https://www.facebook.com/groups/899570467532460",
+  },
+  {
+    img: "/img/content/groups/nft.jpg",
+    title: "NFT and Crypto Art Thailand",
+    href: "https://www.facebook.com/groups/1112704465822065",
+  },
+];
+
+const SPONSORED_CONTENT = [
+  {
+    img: "/img/content/pages/newgen.jpg",
+    title: "Blockchain The New Gen",
+    href: "https://www.facebook.com/BlockchainNewGen",
+    description: "เนื่องจากมีการนำเนื้อหาในเพจมาใช้",
+  }
+];
 
 export default function Home() {
   const [round1Ended, setRound1Ended] = useState(false);
@@ -98,8 +131,18 @@ export default function Home() {
       </div>
 
       <div className="bg-gray-800 text-white">
-        <div className="container mx-auto py-8 md:py-12">
+        <div className="container mx-auto py-8 md:py-12 px-2">
+          <AvatarLinkList items={PREVIEW_CONTENT}></AvatarLinkList>
 
+          <div className="flex flex-row justify-center mt-8">
+            <Link href="/content/community">
+              <button
+                className="bg-white hover:bg-gray-100 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-lg md:text-xl"
+              >
+                <div>ดูเพิ่มเติม...</div>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -114,9 +157,9 @@ export default function Home() {
 
       <div className="bg-gray-800 text-white">
         <div className="container mx-auto py-8 md:py-12">
-          
+          <AvatarLinkList items={SPONSORED_CONTENT} center={true}></AvatarLinkList>
 
-          <div className="flex flex-col md:flex-row justify-center">
+          <div className="flex flex-col md:flex-row justify-center mt-8">
             <a
               className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
               href="https://forms.gle/Bsg8xdYTC5fdi8br9"
@@ -178,6 +221,14 @@ export default function Home() {
           </TimelineItem>
 
           <TimelineItem index={5}>
+            <div className="mb-8 text-yellow-200">
+              <div className="text-xl mb-1">เป็นแหล่งรวม Community และโปรเจคของคนไทย</div>
+              <div className="text-lg mb-2">พฤษภาคม 2021</div>
+              <div className="text-lg">ทุกคนต้องนึกถึง SafeThai เมื่ออยากเรียนรู้ หรือสนับสนุนโปรเจคคนไทย เพราะเป็นเจ้าแรกเจ้าเดียวที่รวมทุกสิ่งทุกอย่างเกี่ยวกับ Defi ไทย และความรู้ต่างๆไม่ว่าจะเป็น ความรู้เบื้องต้น, NFT และอื่นๆ ที่เป็นภาษาไทย และปัจจุบันกระจัดกระจายอยู่ทั่วทุกมุมโลก มาไว้ในเว็บไซต์เดียว โดยจะมีการทำการ Partnership กับ Community และโปรเจคต่างๆทั่วฟ้าเมืองไทย</div>
+            </div>
+          </TimelineItem>
+
+          <TimelineItem index={6}>
             <div className="mb-8">
               <div className="text-lg mb-1">ขายบน CEX</div>
               <div className="mb-2">ตั้งแต่ พฤษภาคม 2021</div>
@@ -185,7 +236,7 @@ export default function Home() {
             </div>
           </TimelineItem>
 
-          <TimelineItem index={6}>
+          <TimelineItem index={7}>
             <div className="mb-8">
               <div className="text-lg mb-1">สนับสนุน Defi ไทย ได้อย่างเต็มกำลัง</div>
               <div className="mb-2">ตั้งแต่ พฤษภาคม 2021</div>
@@ -193,7 +244,7 @@ export default function Home() {
             </div>
           </TimelineItem>
 
-          <TimelineItem index={7}>
+          <TimelineItem index={8}>
             <div className="mb-8">
               <div className="text-lg mb-2">ก้าวไกลสู่ Chain อื่น</div>
               <div className="mb-2">2022</div>
@@ -268,7 +319,7 @@ export default function Home() {
             </div>
 
             <div className="my-4 text-center">
-              <div className="text-3xl mb-3">1,000,000M</div>
+              <div className="text-3xl mb-3">&lt; 4,000,000M</div>
               <div className="text-xl">Airdrop</div>
             </div>
           </div>
