@@ -232,7 +232,7 @@ export default function Home() {
             <div className="mb-8 text-yellow-200">
               <div className="text-xl mb-1">เป็นแหล่งรวม Community และโปรเจคของคนไทย</div>
               <div className="text-lg mb-2">พฤษภาคม 2021</div>
-              <div className="text-lg">ทุกคนต้องนึกถึง SafeThai เมื่ออยากเรียนรู้ หรือสนับสนุนโปรเจคคนไทย เพราะเป็นเจ้าแรกเจ้าเดียวที่รวมทุกสิ่งทุกอย่างเกี่ยวกับ Defi ไทย และความรู้ต่างๆไม่ว่าจะเป็น ความรู้เบื้องต้น, NFT และอื่นๆ ที่เป็นภาษาไทย และปัจจุบันกระจัดกระจายอยู่ทั่วทุกมุมโลก มาไว้ในเว็บไซต์เดียว โดยจะมีการทำการ Partnership กับ Community และโปรเจคต่างๆทั่วฟ้าเมืองไทย</div>
+              <div className="text-lg">ทุกคนต้องนึกถึง SafeThai เมื่ออยากเรียนรู้สิ่งต่างๆในโลก Defi หรือสนับสนุนโปรเจคคนไทย เพราะเป็นเจ้าแรกเจ้าเดียวที่รวมทุกสิ่งทุกอย่างเกี่ยวกับ Defi ไทย และความรู้ต่างๆไม่ว่าจะเป็น ความรู้เบื้องต้น, NFT และอื่นๆ ที่เป็นภาษาไทย และปัจจุบันกระจัดกระจายอยู่ทั่วทุกมุมโลก มาไว้ในเว็บไซต์เดียว โดยจะมีการทำการ Partnership กับ Community และโปรเจคต่างๆทั่วฟ้าเมืองไทย</div>
             </div>
           </TimelineItem>
 
@@ -333,8 +333,11 @@ export default function Home() {
           </div>
 
           <div className="text-center my-4 mb-8">
-            <div className="text-lg mb-2">Round 0 ขายแค่ 2,000,000M = 10 BNB</div>
+            <div className="text-lg mb-2">Round 0 ขายแค่ 4,000,000M = 10 BNB</div>
             <div className="text-lg mb-2">เฉพาะ Round 0 นำไปใช้ 50% LP, 50% Dev</div>
+          </div>
+
+          <div className="text-center my-4 mb-8">
             <div className="text-lg mb-2">ไม่มี Dev Token ปลอดภัยต่อการ Rug Pull</div>
             <div className="text-lg mb-2">ทุกเหรียญจะถูก Lock ไว้ใน Contract พิเศษ</div>
           </div>

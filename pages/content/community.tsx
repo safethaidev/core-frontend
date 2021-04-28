@@ -39,6 +39,11 @@ const FACEBOOK_PAGES = [
     title: "NFT Thai Community",
     href: "https://www.facebook.com/NFT.Thai.Community",
   },
+  {
+    img: "/img/content/pages/cryptobobo.jpg",
+    title: "Crypto โบโบ้",
+    href: "https://www.facebook.com/Cryptobobo",
+  },
 ]
 
 const FACEBOOK_GROUPS = [
@@ -74,11 +79,64 @@ const FACEBOOK_GROUPS = [
   },
 ]
 
+const INFLUENCERS = [
+  {
+    img: "/img/content/persons/blockchainreview.png",
+    title: "Peeraphat Hankongkaew",
+    href: "https://www.facebook.com/bueakhan.peeraphat"
+  },
+  {
+    img: "/img/content/persons/kim.jpg",
+    title: "Bit Investment",
+    href: "https://www.facebook.com/bitinvestmentth"
+  },
+  {
+    img: "/img/content/persons/bit.png",
+    title: "Kim DeFi Daddy",
+    href: "https://www.facebook.com/kimdefidaddy",
+  },
+  {
+    img: "/img/content/persons/piriya.jpg",
+    title: "Piriya Sambandaraksa",
+    href: "https://www.facebook.com/piriya33"
+  },
+  {
+    img: "/img/content/persons/eddie.jpg",
+    title: "Eddie Paradorn",
+    href: "https://www.facebook.com/eddie.paradorn"
+  },
+  {
+    img: "/img/content/persons/niran.jpg",
+    title: "Niran Pravithana",
+    href: "https://www.facebook.com/niranpr"
+  },
+  {
+    img: "/img/content/persons/sanjay.png",
+    title: "สัญชัย ปอปลี",
+    href: "https://www.facebook.com/SanjayPopli.23"
+  },
+  {
+    img: "/img/content/persons/top.png",
+    title: "ท๊อป จิรายุส",
+    href: "https://www.facebook.com/toppjirayutofficial"
+  },
+  {
+    img: "/img/content/persons/tonhor.png",
+    title: "TonHor Palakorn",
+    href: "https://www.facebook.com/tonhor"
+  },
+  {
+    img: "/img/content/persons/poramin.jpg",
+    title: "ปรมินทร์ อินโสม",
+    href: "https://www.facebook.com/InsomPoramin"
+  },
+];
+
 export default function Community() {
   return (
-    <div className="px-2 md:px-8 container text-white mx-auto">
+    <div className="px-4 md:px-8 container text-white mx-auto">
       <Head>
-        <title>SafeThai - เพจ บุคคลสำคัญ และกลุ่มที่คุณควรติดตามเพื่อเป็นแหล่งความรู้สำหรับ Defi - พร้อมแจก Airdrop</title>
+        <title>SafeThai - เพจ กลุ่ม และบุคคลสำคัญ ที่คุณควรติดตามเพื่อเป็นแหล่งความรู้สำหรับ Defi - พร้อมแจก Airdrop</title>
       </Head>
       
       <div className="my-8">
@@ -86,23 +144,30 @@ export default function Community() {
         <div className="text-lg">* เนื้อหาบางส่วนมาจาก<a className="underline" href="https://www.facebook.com/BlockchainNewGen/posts/106675951555465" target="blank">โพสนี้ในเพจ Blockchain The New Gen</a></div>
       </div>
 
-      <div className="my-12">
+      <div className="my-16">
         <div className="text-2xl mb-8 text-yellow-200">Facebook Pages</div>
         <div>
           <AvatarLinkList items={FACEBOOK_PAGES}></AvatarLinkList>
         </div>
       </div>
 
-      <div className="my-12">
+      <div className="my-16">
         <div className="text-2xl mb-8 text-yellow-200">Facebook Groups</div>
         <div>
           <AvatarLinkList items={FACEBOOK_GROUPS}></AvatarLinkList>
         </div>
       </div>
 
+      <div className="my-16">
+        <div className="text-2xl mb-8 text-yellow-200">บุคคลสำคัญ</div>
+        <div>
+          <AvatarLinkList items={INFLUENCERS}></AvatarLinkList>
+        </div>
+      </div>
+
       <hr />
 
-      <div className="my-12">
+      <div className="my-16">
         <div className="text-2xl mb-8 text-yellow-200">Airdrop SafeThai</div>
         <div>
           <Link href="/airdrop">
