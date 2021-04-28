@@ -1,4 +1,5 @@
 import { useWeb3React } from "@web3-react/core";
+import Head from "next/head";
 import React from "react";
 import ConnectWalletButton from "../components/ConnectWalletButton";
 
@@ -6,6 +7,13 @@ export default function Airdrop(props) {
   const { account, active } = useWeb3React();
   const LINK = "https://safethai.finance/airdrop?w=" + account;
   const LinkComponent = <a className="underline" href={LINK} target="blank">{LINK}</a>
+
+  const HeadSection = (
+    <Head>
+      <title>SafeThai - แจก Airdrop เพื่อช่วย Defi ไทยใบนี้ไว้</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+  )
 
   if (!active) {
     return (

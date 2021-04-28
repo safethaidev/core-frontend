@@ -50,6 +50,11 @@ export default function Round0(props) {
 
   return (
     <div className="text-white">
+      <Head>
+        <title>SafeThai - ซื้อเหรียญต้นน้ำ เพื่อช่วย Defi ไทยใบนี้ไว้</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <div className="flex flex-col items-center my-4">
         <div className="text-4xl mb-2">Round 0</div>
         <div className="text-lg mb-2">รอบสำหรับผู้ศรัทธา</div>

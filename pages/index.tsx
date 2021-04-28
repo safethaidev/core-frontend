@@ -126,7 +126,7 @@ export default function Home() {
       {/* Knowledge */}
       <div className="bg-gray-800 text-white">
         <div className="container mx-auto pt-8 md:pt-12">
-          <div className="text-center text-3xl mb-4 text-yellow-200">แหล่งความรู้เกี่ยวกับ Defi</div>
+          <div className="text-center text-3xl mb-4 text-yellow-200">แหล่งความรู้สำหรับ Defi</div>
         </div>
       </div>
 
