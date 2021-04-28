@@ -13,7 +13,7 @@ export default function AvatarLink({
 }) {
   return (
     <div>
-      <div className="hidden md:block">
+      <div className="hidden md:block hover-opacity">
         <a className="flex flex-col items-center" href={href} target={target}>
           <img
             className="rounded-full mb-4"
@@ -26,11 +26,11 @@ export default function AvatarLink({
           ></img>
           <div className="text-xl text-center mb-1">{title}</div>
           {description && <div className="text-center mb-1">{description}</div>}
-          {href && href != "#" && (
+          {/* {href && href != "#" && (
             <button className="bg-white hover:bg-gray-100 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 mt-3 text-lg">
               <div>เข้าชมเลย</div>
             </button>
-          )}
+          )} */}
         </a>
       </div>
 

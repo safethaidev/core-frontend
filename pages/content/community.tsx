@@ -15,6 +15,11 @@ const FACEBOOK_PAGES = [
     href: "https://www.facebook.com/blockchainreviewth",
   },
   {
+    img: "/img/content/pages/siamblockchain.png",
+    title: "Siam Blockchain",
+    href: "https://www.facebook.com/siamblockchain"
+  },
+  {
     img: "/img/content/pages/kim.jpg",
     title: "Kim DeFi Daddy",
     href: "https://www.facebook.com/kimdefidaddy",
@@ -43,6 +48,11 @@ const FACEBOOK_PAGES = [
     img: "/img/content/pages/cryptobobo.jpg",
     title: "Crypto โบโบ้",
     href: "https://www.facebook.com/Cryptobobo",
+  },
+  {
+    img: "/img/content/persons/poramin.jpg",
+    title: "ปรมินทร์ อินโสม",
+    href: "https://www.facebook.com/InsomPoramin"
   },
 ]
 
@@ -87,13 +97,13 @@ const INFLUENCERS = [
   },
   {
     img: "/img/content/persons/kim.jpg",
-    title: "Bit Investment",
-    href: "https://www.facebook.com/bitinvestmentth"
+    title: "Kim DeFi Daddy",
+    href: "https://www.facebook.com/kimdefidaddy",
   },
   {
     img: "/img/content/persons/bit.png",
-    title: "Kim DeFi Daddy",
-    href: "https://www.facebook.com/kimdefidaddy",
+    title: "Bit Investment",
+    href: "https://www.facebook.com/bitinvestmentth"
   },
   {
     img: "/img/content/persons/piriya.jpg",
@@ -136,7 +146,11 @@ export default function Community() {
   return (
     <div className="px-4 md:px-8 container text-white mx-auto">
       <Head>
-        <title>SafeThai - เพจ กลุ่ม และบุคคลสำคัญ ที่คุณควรติดตามเพื่อเป็นแหล่งความรู้สำหรับ Defi - พร้อมแจก Airdrop</title>
+        <title>SafeThai - เพจ กลุ่ม และบุคคลสำคัญในด้าน Defi ที่คุณควรติดตามเพื่อเป็นแหล่งความรู้ - พร้อมแจก Airdrop</title>
+        <meta property="og:type"          content="article" />
+        <meta property="og:title"         content="SafeThai - เพจ กลุ่ม และบุคคลสำคัญในด้าน Defi ที่คุณควรติดตามเพื่อเป็นแหล่งความรู้ - พร้อมแจก Airdrop" />
+        <meta property="og:description"   content="เพจ กลุ่ม และบุคคลสำคัญในด้าน Defi ที่คุณควรติดตามเพื่อเป็นแหล่งความรู้ พร้อมแจก Airdrop SafeThai" />
+        <meta property="og:image"         content="https://safethai.vercel.app/img/cover/community.jpg" />
       </Head>
       
       <div className="my-8">

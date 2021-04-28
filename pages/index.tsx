@@ -68,13 +68,14 @@ export default function Home() {
             <div className="text-2xl my-3 text-yellow-200">Round 0</div>
 
             <div className="my-3 text-center text-xl">
-              <div>4,000,000 MSafeThai</div>
-              <div>10 BNB</div>
+              <div>100,000,000 MSafeThai</div>
+              <div>12.5 BNB</div>
               <div>ได้เหรียญภายในหนึ่งวันหลังจากเปิด Round 1</div>
             </div>
 
             <div className="my-4 text-center">
               <div>ราคาเพิ่มขึ้น 2 เท่า ทุกรอบ</div>
+              <div>มีตั้งแต่ Round 0 ถึง 5 เท่านั้น</div>
               <div>เมื่อซื้อระบบจะ Provide Liquidity อัตโนมัติ</div>
               <div>สามารถเทรดได้ใน PancakeSwap หลัง Round 1 จบ</div>
             </div>
@@ -317,7 +318,7 @@ export default function Home() {
         <div className="container mx-auto py-8 md:py-12">
           <div className="flex justify-around flex-col md:flex-row my-4">
             <div className="my-4 text-center">
-              <div className="text-3xl mb-3">10,000,000M</div>
+              <div className="text-3xl mb-3">100,000,000M</div>
               <div className="text-xl">ทยอยขายในแต่ละรอบ</div>
             </div>
 
@@ -327,7 +328,7 @@ export default function Home() {
             </div>
 
             <div className="my-4 text-center">
-              <div className="text-3xl mb-3">&lt; 4,000,000M</div>
+              <div className="text-3xl mb-3">&lt; 40,000,000M</div>
               <div className="text-xl">Airdrop</div>
             </div>
           </div>

@@ -10,3 +10,7 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.hover-opacity:hover {
+  opacity: 0.8;
+}

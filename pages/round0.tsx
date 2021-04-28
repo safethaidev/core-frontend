@@ -20,7 +20,7 @@ export default function Round0(props) {
   let remainingBnb = Math.max(0, 10 - bnbBalance);
   let remainingToLaunch = Math.max(0, 1 - bnbBalance);
 
-  const MULTIPLIER = 4000000 / 10;
+  const MULTIPLIER = 100000000 / 10;
 
   // Polling to get wallet balance
   async function getWalletBalance(polling = false) {
