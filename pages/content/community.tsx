@@ -2,6 +2,7 @@ import Head from "next/head"
 import React from "react"
 import AvatarLinkList from "../../components/AvatarLinkList"
 import Link from "next/link"
+import SafeThaiOfficial from "../../components/SafeThaiOfficial"
 
 const FACEBOOK_PAGES = [
   {
@@ -96,7 +97,7 @@ const INFLUENCERS = [
     href: "https://www.facebook.com/bueakhan.peeraphat"
   },
   {
-    img: "/img/content/persons/kim.jpg",
+    img: "/img/content/persons/kim.png",
     title: "Kim DeFi Daddy",
     href: "https://www.facebook.com/kimdefidaddy",
   },
@@ -106,17 +107,17 @@ const INFLUENCERS = [
     href: "https://www.facebook.com/bitinvestmentth"
   },
   {
-    img: "/img/content/persons/piriya.jpg",
+    img: "/img/content/persons/piriya.png",
     title: "Piriya Sambandaraksa",
     href: "https://www.facebook.com/piriya33"
   },
   {
-    img: "/img/content/persons/eddie.jpg",
+    img: "/img/content/persons/eddie.png",
     title: "Eddie Paradorn",
     href: "https://www.facebook.com/eddie.paradorn"
   },
   {
-    img: "/img/content/persons/niran.jpg",
+    img: "/img/content/persons/niran.png",
     title: "Niran Pravithana",
     href: "https://www.facebook.com/niranpr"
   },
@@ -182,8 +183,8 @@ export default function Community() {
       <hr />
 
       <div className="my-16">
-        <div className="text-2xl mb-8 text-yellow-200">Airdrop SafeThai</div>
-        <div>
+        <div className="text-3xl mb-8 text-yellow-200 text-center">Airdrop SafeThai</div>
+        <div className="flex justify-center">
           <Link href="/airdrop">
             <button
               className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
@@ -193,6 +194,8 @@ export default function Community() {
           </Link>
         </div>
       </div>
+
+      <SafeThaiOfficial></SafeThaiOfficial>
     </div>
   )
 }

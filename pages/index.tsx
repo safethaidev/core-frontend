@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React, { useState } from 'react';
 import AvatarLinkList from '../components/AvatarLinkList';
+import SafeThaiOfficial from '../components/SafeThaiOfficial';
 import TimelineItem from '../components/TimelineItem'
 
 const PREVIEW_CONTENT = [
@@ -123,6 +124,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <SafeThaiOfficial></SafeThaiOfficial>
 
       {/* Knowledge */}
       <div className="bg-gray-800 text-white">
@@ -296,7 +299,7 @@ export default function Home() {
             </div>
 
             <div className="my-4 text-center">
-              <div className="text-3xl mb-3">Buyback &amp; Burn</div>
+              <div className="text-3xl mb-3">Burn SafeThai</div>
               <div className="text-xl">1%</div>
             </div>
           </div>

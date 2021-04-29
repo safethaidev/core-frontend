@@ -22,6 +22,12 @@ export default function Airdrop(props) {
         </div>
 
         <div className="my-8">
+          <div>* ได้เหรียญในไม่กี่สัปดาห์หลังจากขาย Round 3 หมด</div>
+          <div>* จำกัดเฉพาะ 5000 คนแรกเท่านั้น</div>
+          <div>* ถ้าดังถึงระดับ SafeMoon แค่ Airdrop ก็เกิน 10,000 บาทแล้ว</div>
+        </div>
+
+        <div className="my-8">
           <ConnectWalletButton></ConnectWalletButton>
         </div>
       </div>
@@ -37,10 +43,11 @@ export default function Airdrop(props) {
       <div className="my-8">
         <div>* ได้เหรียญในไม่กี่สัปดาห์หลังจากขาย Round 3 หมด</div>
         <div>* จำกัดเฉพาะ 5000 คนแรกเท่านั้น</div>
+        <div>* ถ้าดังถึงระดับ SafeMoon แค่ Airdrop ก็เกิน 10,000 บาทแล้ว</div>
       </div>
 
       <div className="my-8" id="facebook">
-        <div className="text-xl mb-4 text-yellow-200">Facebook (400,000,000 SafeThai)</div>
+        <div className="text-xl mb-4 text-yellow-200">Facebook (300,000,000 SafeThai)</div>
 
         <ol className="list-decimal px-8">
           <li>กด Like <a className="underline" href="https://www.facebook.com/SafeThaiFinance/" target="blank">เพจ SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
@@ -51,7 +58,7 @@ export default function Airdrop(props) {
       </div>
 
       <div className="my-8">
-        <div className="text-xl mb-4 text-yellow-200">Twitter (400,000,000 SafeThai)</div>
+        <div className="text-xl mb-4 text-yellow-200">Twitter (300,000,000 SafeThai)</div>
 
         <ol className="list-decimal px-8">
           <li>กด Follow <a className="underline" href="https://twitter.com/SafethaiD">Twitter SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
@@ -61,7 +68,7 @@ export default function Airdrop(props) {
       </div>
 
       <div className="my-8">
-        <div className="text-xl mb-4 text-yellow-200">Discord (400,000,000 SafeThai)</div>
+        <div className="text-xl mb-4 text-yellow-200">Discord (300,000,000 SafeThai)</div>
 
         <ol className="list-decimal px-8">
           <li>Join <a className="underline" href="https://discord.gg/3nzFyJq6gd" target="blank">Discord SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
@@ -70,7 +77,7 @@ export default function Airdrop(props) {
       </div>
 
       <div className="my-8">
-        <div className="text-xl mb-4 text-yellow-200">Blockchain The New Gen (200,000,000 SafeThai)</div>
+        <div className="text-xl mb-4 text-yellow-200">Blockchain The New Gen (100,000,000 SafeThai)</div>
         <div></div>
 
         <ol className="list-decimal px-8">
@@ -83,8 +90,8 @@ export default function Airdrop(props) {
       <div className="my-8">
         <div className="text-xl mb-4 text-yellow-200">Free Style (1,000,000,000 SafeThai)</div>
         <div className="mb-4">
-          <div>* 1000 คนแรกเท่านั้นที่ผ่านการพิจารณา</div>
-          <div>* ต้องแปะในที่ที่มีสมาชิกอย่างน้อย 1000 คน</div>
+          <div>* 2000 คนแรกเท่านั้นที่ผ่านการพิจารณา</div>
+          <div>* ต้องแปะในที่ที่มีสมาชิกอย่างน้อย 500 คน</div>
           <div>* ถ้าใช้การ Comment ต้อง Comment 2 โพส หรือ Comment 1 โพส พร้อม Share</div>
         </div>
 
