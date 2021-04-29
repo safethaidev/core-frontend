@@ -65,7 +65,13 @@ export default function Round0(props) {
       </div>
 
       {loading ? (
-        <div className="text-3xl my-12 text-center">กำลังโหลด...</div>
+        <div>
+          <div className="text-3xl my-12 text-center">กำลังโหลด...</div>
+          <div className="text-3xl my-12 text-center">จำเป็นต้องใช้ Metamask หรือ Trust Wallet</div>
+          <div className="my-12 flex justify-center">
+            <ConnectWalletButton></ConnectWalletButton>
+          </div>
+        </div>
       ) : remainingBnb > 0 ? (
         <>
           <div className="flex flex-col items-center my-4 mt-8">

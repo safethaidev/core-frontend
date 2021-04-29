@@ -205,6 +205,8 @@ export default function Community() {
 
       <hr />
 
+      <SafeThaiOfficial></SafeThaiOfficial>
+
       <div className="my-16">
         <div className="text-3xl mb-8 text-yellow-200 text-center">SafeThai Airdrop &amp; Presale</div>
         <div className="flex justify-center">
@@ -234,8 +236,6 @@ export default function Community() {
           </Link>
         </div>
       </div>
-
-      <SafeThaiOfficial></SafeThaiOfficial>
     </div>
   )
 }
