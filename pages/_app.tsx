@@ -32,6 +32,7 @@ function MyApp({ Component, pageProps }) {
           />
           <link rel="icon" href="/safethai.png" />
           <title>SafeThai - ช่วย Defi ไทยใบนี้ไว้ - Defi Venture Capital สำหรับคนไทย</title>
+          <meta property="og:image"         content="https://safethai.finance/img/cover/fbcover.jpg" />
         </Head>
 
         <Header></Header>

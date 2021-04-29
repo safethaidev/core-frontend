@@ -150,7 +150,7 @@ export default function Community() {
         <meta property="og:type"          content="article" />
         <meta property="og:title"         content="SafeThai - เพจ กลุ่ม และบุคคลสำคัญในด้าน Defi ที่คุณควรติดตามเพื่อเป็นแหล่งความรู้ - พร้อมแจก Airdrop" />
         <meta property="og:description"   content="เพจ กลุ่ม และบุคคลสำคัญในด้าน Defi ที่คุณควรติดตามเพื่อเป็นแหล่งความรู้ พร้อมแจก Airdrop SafeThai" />
-        <meta property="og:image"         content="https://safethai.vercel.app/img/cover/community.jpg" />
+        <meta property="og:image"         content="https://safethai.finance/img/cover/community.jpg" />
       </Head>
       
       <div className="my-8">

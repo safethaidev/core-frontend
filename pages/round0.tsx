@@ -15,31 +15,35 @@ export default function Round0(props) {
   const [loading, setLoading] = useState(true);
   const [bnbBalance, setBnbBalance] = useState(0);
   const [bnbAmount, setBnbAmount] = useState("");
+  const [lastPoll, setLastPoll] = useState(0);
   const { account, active } = useWeb3React();
 
-  let remainingBnb = Math.max(0, 10 - bnbBalance);
+  let remainingBnb = Math.max(0, 12.5 - bnbBalance);
   let remainingToLaunch = Math.max(0, 1 - bnbBalance);
 
-  const MULTIPLIER = 100000000 / 10;
+  const MULTIPLIER = 100000000 / 12.5;
 
   // Polling to get wallet balance
-  async function getWalletBalance(polling = false) {
+  async function getWalletBalance() {
     let balance = parseFloat(
       web3.utils.fromWei(await web3.eth.getBalance(WALLET_ADDRESS))
     );
     setBnbBalance(balance);
     setLoading(false);
-
-    if (polling) {
-      setTimeout(getWalletBalance, 3000);
-    }
+    setLastPoll(Date.now());
 
     return balance;
   }
 
   useEffect(() => {
-    getWalletBalance(true);
+    getWalletBalance();
+    setLastPoll(Date.now());
   }, []);
+
+  useEffect(() => {
+    setTimeout(getWalletBalance, 3000);
+  }, [lastPoll]);
+
 
   useEffect(() => {
     let filtered = bnbAmount.replace(/[^\d\.]/g, "");

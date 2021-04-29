@@ -201,7 +201,7 @@ export default function Home() {
             <div className="mb-8">
               <div className="text-lg mb-1">เปิดขายผ่านหน้าเว็บ</div>
               <div className="mb-2">สัปดาห์แรก พฤษภาคม 2564</div>
-              <div>รอบ 0 จำเป็นต้องซื้อผ่านหน้าเว็บ สำหรับรอบอื่นๆสามารถซื้อผ่านหน้าเว็บได้ตลอดถ้าราคาถูกกว่า PancakeSwap</div>
+              <div>รอบ 0 และ 1 จำเป็นต้องซื้อผ่านหน้าเว็บ สำหรับรอบอื่นๆสามารถซื้อผ่านหน้าเว็บได้ตลอดถ้าราคาถูกกว่า PancakeSwap</div>
             </div>
           </TimelineItem>
 
@@ -209,7 +209,7 @@ export default function Home() {
             <div className="mb-8">
               <div className="text-lg mb-1">เปิดขายผ่าน PancakeSwap</div>
               <div className="mb-2">เมษายน 2564</div>
-              <div>ราคาขึ้นอย่างน้อย 4x จากการขายรอบ 0 แน่นอน!</div>
+              <div>ราคาขึ้นอย่างน้อย 2x จากการขายรอบ 0 แน่นอน!</div>
             </div>
           </TimelineItem>
 
@@ -232,7 +232,7 @@ export default function Home() {
           <TimelineItem index={6}>
             <div className="mb-8 text-yellow-200">
               <div className="text-xl mb-1">เป็นแหล่งรวม Community และโปรเจคของคนไทย</div>
-              <div className="text-lg mb-2">พฤษภาคม 2021</div>
+              <div className="text-lg mb-2">ตั้งแต่ พฤษภาคม 2021</div>
               <div className="text-lg">ทุกคนต้องนึกถึง SafeThai เมื่ออยากเรียนรู้สิ่งต่างๆในโลก Defi หรือสนับสนุนโปรเจคคนไทย เพราะเป็นเจ้าแรกเจ้าเดียวที่รวมทุกสิ่งทุกอย่างเกี่ยวกับ Defi ไทย และความรู้ต่างๆไม่ว่าจะเป็น ความรู้เบื้องต้น, NFT และอื่นๆ ที่เป็นภาษาไทย และปัจจุบันกระจัดกระจายอยู่ทั่วทุกมุมโลก มาไว้ในเว็บไซต์เดียว โดยจะมีการทำการ Partnership กับ Community และโปรเจคต่างๆทั่วฟ้าเมืองไทย</div>
             </div>
           </TimelineItem>
