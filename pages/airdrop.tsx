@@ -77,7 +77,7 @@ export default function Airdrop(props) {
         </ol>
       </div>
 
-      <div className="my-8">
+      {/* <div className="my-8">
         <div className="text-xl mb-4 text-yellow-200">Blockchain The New Gen (100,000,000 SafeThai)</div>
         <div></div>
 
@@ -86,7 +86,7 @@ export default function Airdrop(props) {
           <li>กด Like <a className="underline" href="https://www.facebook.com/BlockchainNewGen" target="blank">เพจ Blockchain The New Gen</a></li>
           <li>เข้ากลุ่ม <a className="underline" href="https://www.facebook.com/groups/1738492826331671" target="blank">New Gen Defi Society</a></li>
         </ol>
-      </div>
+      </div> */}
 
       {/* <div className="my-8">
         <div className="text-xl mb-4 text-yellow-200">Free Style (1,000,000,000 SafeThai)</div>
