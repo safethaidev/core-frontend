@@ -54,7 +54,7 @@ export default function Airdrop(props) {
           <li>กด Like <a className="underline" href="https://www.facebook.com/SafeThaiFinance/" target="blank">เพจ SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
           <li>เข้ากลุ่ม <a className="underline" href="https://www.facebook.com/groups/791619518452583" target="blank">SafeThai Community</a></li>
           <li>แชร์ <a className="underline" href="https://www.facebook.com/SafeThaiFinance/posts/107818658124503" target="blank">โพสนี้</a> แล้วแท็กเพื่อน 3 คน</li>
-          <li>Comment ใต้ <a className="underline" href="https://www.facebook.com/SafeThaiFinance/posts/107818658124503" target="blank">โพสนี้</a> แล้วแท็กเพื่อน 3 คน พร้อมทั้งแปะลิ้ง {LinkComponent} เข้าไปต่อท้าย</li>
+          <li>Comment ใต้ <a className="underline" href="https://www.facebook.com/SafeThaiFinance/posts/107818658124503" target="blank">โพสนี้</a> โดยแปะลิ้ง {LinkComponent} เข้าไปต่อท้าย</li>
         </ol>
       </div>
 
