@@ -99,13 +99,13 @@ export default function Home() {
           </div> */}
 
           <div className="flex flex-col md:flex-row justify-center">
-            <Link href="/round0">
+            {/* <Link href="/round0"> */}
               <button
                 className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
               >
-                <div>ซื้อ Round 0</div>
+                <div>Round 0 ขายหมดแล้ว</div>
               </button>
-            </Link>
+            {/* </Link> */}
 
             {round1Ended ?
               <button
