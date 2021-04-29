@@ -33,6 +33,20 @@ function MyApp({ Component, pageProps }) {
           <link rel="icon" href="/safethai.png" />
           <title>SafeThai - ช่วย Defi ไทยใบนี้ไว้ - Defi Venture Capital สำหรับคนไทย</title>
           <meta property="og:image"         content="https://safethai.finance/img/cover/fbcover.jpg" key="ogimage" />
+
+          {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5C63W7XJC"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+  
+              gtag('config', 'G-C5C63W7XJC');
+              `
+            }}
+          ></script>
         </Head>
 
         <Header></Header>

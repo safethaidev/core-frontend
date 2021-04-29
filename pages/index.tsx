@@ -125,6 +125,21 @@ export default function Home() {
         </div>
       </div>
 
+      {/* What is SafeThai */}
+      <div className="bg-gray-800 text-white">
+        <div className="container mx-auto pt-8 md:pt-12">
+          <div className="text-center text-3xl text-yellow-200">SafeThai ทำอะไร</div>
+        </div>
+      </div>
+
+      <div className="bg-gray-800 text-white">
+        <div className="container mx-auto py-8 md:py-12 px-2 text-center">
+          <p className="mb-3">SafeThai เป็นผู้พัฒนา Community Aggregator ซึ่งคือ Platform ที่ทำการควบรวมเนื้อหาจากหลากหลาย Community มาไว้ในที่เดียว เพื่อให้ผู้เล่นรายใหม่ที่เข้ามาในโลกของ Defi ไทย สามารถหาความรู้ได้ง่าย และรู้สึกปลอดภัยในการลงทุนในโลก Defi</p>
+          <p className="mb-3">นอกจากนั้น SafeThai ยังทำการจัดตั้งกองทุนเพื่อลงทุนในโปรเจคคนไทยที่มี Idea ดีแต่ไม่มีเงินทุนอีกด้วย เพื่อพัฒนาโลก Defi ไทยให้แข็งแกร่งยิ่งขึ้น</p>
+          <p className="mb-3">โดยมีสิ่งที่ทำไปแล้ว 10% ก็คือ <a className="underline" href="https://www.safethai.finance/content/community" target="blank">หน้ารวมแหล่งความรู้สำหรับ Defi ไทย</a></p>
+        </div>
+      </div>
+
       <SafeThaiOfficial></SafeThaiOfficial>
 
       {/* Knowledge */}
@@ -172,6 +187,24 @@ export default function Home() {
               <div>ขอรับการสนับสนุน</div>
             </a>
           </div>
+        </div>
+      </div>
+
+      {/* Business Model */}
+      <div className="bg-gray-800 text-white">
+        <div className="container mx-auto pt-8 md:pt-12">
+          <div className="text-center text-3xl text-yellow-200">Business Model</div>
+        </div>
+      </div>
+
+      <div className="bg-gray-800 text-white">
+        <div className="container mx-auto py-8 md:py-12">
+          <ul className="list-disc">
+            <li>บางโปรเจคที่ได้รับการสนับสนุนเงินทุน จะรองรับการใช้จ่ายด้วย SafeThai</li>
+            <li>บางโปรเจคที่ได้รับการสนับสนุนเงินทุน จะช่วยนำกำไรมา Buyback and Burn SafeThai</li>
+            <li>ในอนาคตอาจมี Premium subscription โดยจะเป็นในลักษณะของการ Hold เหรียญ หรือการจ่ายรายเดือน แล้วแต่ลักษณะของ Feature นั้นๆ</li>
+            <li>รายได้จากค่าโฆษณา</li>
+          </ul>
         </div>
       </div>
 
