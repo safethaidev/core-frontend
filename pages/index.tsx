@@ -52,7 +52,8 @@ export default function Home() {
           <div className="mb-4">
             <div className="flex justify-center mb-12">
               <img src="/safethai.png" style={{
-                maxWidth: 240
+                maxWidth: 240,
+                height: 240,
               }}></img>
             </div>
 
