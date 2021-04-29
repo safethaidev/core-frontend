@@ -151,7 +151,7 @@ export default function Community() {
         <meta property="og:type"          content="article" key="ogtype" />
         <meta property="og:title"         content="SafeThai - เพจ กลุ่ม และบุคคลสำคัญในด้าน Defi ที่คุณควรติดตามเพื่อเป็นแหล่งความรู้ - พร้อมแจก Airdrop" key="ogtitle" />
         <meta property="og:description"   content="เพจ กลุ่ม และบุคคลสำคัญในด้าน Defi ที่คุณควรติดตามเพื่อเป็นแหล่งความรู้ พร้อมแจก Airdrop SafeThai" key="ogdescription" />
-        <meta property="og:image"         content="https://safethai.finance/img/cover/community.jpg" key="ogimage" />
+        <meta property="og:image"         content="https://safethai.finance/img/cover/community2.jpg" key="ogimage" />
       </Head>
       
       <div className="my-8">
