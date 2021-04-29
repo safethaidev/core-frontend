@@ -52,8 +52,8 @@ export default function Airdrop(props) {
         <ol className="list-decimal px-8">
           <li>กด Like <a className="underline" href="https://www.facebook.com/SafeThaiFinance/" target="blank">เพจ SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
           <li>เข้ากลุ่ม <a className="underline" href="https://www.facebook.com/groups/791619518452583" target="blank">SafeThai Community</a></li>
-          <li>แชร์ โพสนี้ แล้วแท็กเพื่อน 3 คน</li>
-          <li>Comment ใต้ โพสนี้ แล้วแท็กเพื่อน 3 คน พร้อมทั้งแปะลิ้ง {LinkComponent} เข้าไปต่อท้าย</li>
+          <li>แชร์ <a className="underline" href="https://www.facebook.com/SafeThaiFinance/posts/107818658124503" target="blank">โพสนี้</a> แล้วแท็กเพื่อน 3 คน</li>
+          <li>Comment ใต้ <a className="underline" href="https://www.facebook.com/SafeThaiFinance/posts/107818658124503" target="blank">โพสนี้</a> แล้วแท็กเพื่อน 3 คน พร้อมทั้งแปะลิ้ง {LinkComponent} เข้าไปต่อท้าย</li>
         </ol>
       </div>
 
@@ -62,8 +62,8 @@ export default function Airdrop(props) {
 
         <ol className="list-decimal px-8">
           <li>กด Follow <a className="underline" href="https://twitter.com/SafethaiD">Twitter SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
-          <li>Retweet tweet นี้ แล้วแท็กเพื่อน 3 คน</li>
-          <li>Comment ใต้ tweet นี้ แล้วแท็กเพื่อน 3 คน พร้อมทั้งแปะลิ้ง {LinkComponent} เข้าไปต่อท้าย</li>
+          <li>Retweet <a className="underline" href="https://twitter.com/SafethaiD/status/1387704101807525895" target="blank">tweet นี้</a> แล้วแท็กเพื่อน 3 คน</li>
+          <li>Comment ใต้ <a className="underline" href="https://twitter.com/SafethaiD/status/1387704101807525895" target="blank">tweet นี้</a> แล้วแท็กเพื่อน 3 คน พร้อมทั้งแปะลิ้ง {LinkComponent} เข้าไปต่อท้าย</li>
         </ol>
       </div>
 
@@ -87,7 +87,7 @@ export default function Airdrop(props) {
         </ol>
       </div>
 
-      <div className="my-8">
+      {/* <div className="my-8">
         <div className="text-xl mb-4 text-yellow-200">Free Style (1,000,000,000 SafeThai)</div>
         <div className="mb-4">
           <div>* 2000 คนแรกเท่านั้นที่ผ่านการพิจารณา</div>
@@ -99,7 +99,7 @@ export default function Airdrop(props) {
           <li>เขียนโพสด้วยตนเอง หรือ Copy จากโพสตัวอย่างนี้ ไปแปะในที่ไหนก็ได้ ที่มีสมาชิกอยู่มาก หรือ Comment ใต้โพส 2 โพส หรือ Comment 1 โพส พร้อม Share (เลือกอย่างใดอย่างหนึ่ง หรือทำทั้งหมดก็ได้)</li>
           <li>ส่งลิ้ง พร้อมแคปหน้าจอ ไปใน Channel #freestyle-airdrop ใน <a className="underline" href="https://discord.gg/3nzFyJq6gd" target="blank">Discord SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
         </ol>
-      </div>
+      </div> */}
     </div>
   )
 }

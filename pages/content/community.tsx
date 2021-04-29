@@ -64,6 +64,11 @@ const FACEBOOK_GROUPS = [
     href: "https://www.facebook.com/groups/1738492826331671",
   },
   {
+    img: "/img/content/groups/bitcoinaddict.png",
+    title: "Bitcoin Addict Community",
+    href: "https://www.facebook.com/groups/cryptoaddict",
+  },
+  {
     img: "/img/content/groups/defikanmai.jpg",
     title: "defi กันไหมวัยรุ่น",
     href: "https://www.facebook.com/groups/899570467532460",
@@ -87,6 +92,11 @@ const FACEBOOK_GROUPS = [
     img: "/img/content/groups/polkadotthailand.jpg",
     title: "Polkadot​ thailand",
     href: "https://www.facebook.com/groups/967887583615100",
+  },
+  {
+    img: "/img/content/groups/shitcointhailand.jpg",
+    title: "SHITCOIN THAILAND",
+    href: "https://www.facebook.com/groups/274853860929455",
   },
 ]
 
@@ -177,6 +187,19 @@ export default function Community() {
         <div className="text-2xl mb-8 text-yellow-200">บุคคลสำคัญ</div>
         <div>
           <AvatarLinkList items={INFLUENCERS}></AvatarLinkList>
+        </div>
+      </div>
+
+      <div className="my-16">
+        <div className="text-2xl mb-8 text-yellow-200">มีบางอย่างขาดหายไป ?</div>
+        <div>
+          <a href="https://forms.gle/oy2rzEygaRrgzQqZ8" target="blank">
+            <button
+              className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
+            >
+              <div>แนะนำ เพจ / กลุ่ม / บุคคลสำคัญ และอื่นๆ เพิ่มเติม</div>
+            </button>
+          </a>
         </div>
       </div>
 

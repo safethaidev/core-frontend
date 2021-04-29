@@ -6,7 +6,7 @@ import ConnectWalletButton from "../components/ConnectWalletButton";
 import { web3 } from "../utils/web3";
 
 function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parseInt(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 const WALLET_ADDRESS = "0x41d10B48d99f49f1573769E1308f1A76ee5472b0";
@@ -74,7 +74,7 @@ export default function Round0(props) {
               {numberWithCommas(Math.floor(remainingBnb * MULTIPLIER))}{" "}
               MSafeThai
             </div>
-            <div className="text-lg mb-2">{remainingBnb} BNB</div>
+            <div className="text-lg mb-2">{remainingBnb.toFixed(2)} BNB</div>
             {/* <div className="text-lg mb-2">
               จำกัดการซื้อ 1 BNB ถ้าซื้อเกินคุณจะเสียเงินฟรี
             </div> */}
@@ -83,7 +83,7 @@ export default function Round0(props) {
           <div className="flex flex-col items-center my-4">
             <div className="text-lg mb-1">
               {remainingToLaunch > 0
-                ? "ต้องการอีก " + remainingToLaunch + " BNB เพื่อ Launch"
+                ? "ต้องการอีก " + remainingToLaunch.toFixed(2) + " BNB เพื่อ Launch"
                 : "รอการ Launch เร็วๆนี้"}
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function Round0(props) {
             }}
           >
             <label className="block text-sm font-medium text-white mb-3 text-lg">
-              ต้องการซื้อ
+              ต้องการซื้อ (ขั้นต่ำ 0.01 BNB)
             </label>
             <div className="mt-1 relative rounded-md shadow-sm">
               {/* <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -154,6 +154,11 @@ export default function Round0(props) {
 
                       if (!bnbAmountFloat || bnbAmountFloat < 0) {
                         alert("จำนวนเหรียญไม่ถูกต้อง");
+                        return;
+                      }
+
+                      if (bnbAmountFloat < 0.01) {
+                        alert("ขั้นต่ำ 0.01 BNB");
                         return;
                       }
 
