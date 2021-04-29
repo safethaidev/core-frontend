@@ -1,5 +1,6 @@
 import { useWeb3React } from "@web3-react/core";
 import Head from "next/head";
+import Link from "next/link";
 import React from "react";
 import ConnectWalletButton from "../components/ConnectWalletButton";
 
@@ -100,6 +101,24 @@ export default function Airdrop(props) {
           <li>ส่งลิ้ง พร้อมแคปหน้าจอ ไปใน Channel #freestyle-airdrop ใน <a className="underline" href="https://discord.gg/3nzFyJq6gd" target="blank">Discord SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
         </ol>
       </div> */}
+
+      <div className="my-8 flex flex-col lg:flex-row">
+        <Link href="/round0">
+          <button
+            className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
+          >
+            <div>ซื้อ Round 0 ต่อเลย</div>
+          </button>
+        </Link>
+
+        <Link href="/">
+          <button
+            className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
+          >
+            <div>ศึกษาข้อมูลเกี่ยวกับ SafeThai เพิ่มเติม</div>
+          </button>
+        </Link>
+      </div>
     </div>
   )
 }

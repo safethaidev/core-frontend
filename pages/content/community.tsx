@@ -206,13 +206,30 @@ export default function Community() {
       <hr />
 
       <div className="my-16">
-        <div className="text-3xl mb-8 text-yellow-200 text-center">Airdrop SafeThai</div>
+        <div className="text-3xl mb-8 text-yellow-200 text-center">SafeThai Airdrop &amp; Presale</div>
         <div className="flex justify-center">
           <Link href="/airdrop">
             <button
               className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
             >
               <div>ล่า Airdrop</div>
+            </button>
+          </Link>
+
+          <Link href="/round0">
+            <button
+              className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
+            >
+              <div>ซื้อ Round 0</div>
+            </button>
+          </Link>
+        </div>
+        <div className="flex justify-center">
+          <Link href="/">
+            <button
+              className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
+            >
+              <div>ศึกษาข้อมูลเกี่ยวกับ SafeThai เพิ่มเติม</div>
             </button>
           </Link>
         </div>
