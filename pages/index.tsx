@@ -76,7 +76,7 @@ export default function Home() {
             </div>
 
             <div className="my-4 text-center">
-              <div>ราคาเพิ่มขึ้น 2 เท่า ทุกรอบ</div>
+              <div>ราคาเพิ่มขึ้น 2 เท่า ทุกรอบ (ไม่ใช่การการันตีผลตอนแทน)</div>
               <div>มีตั้งแต่ Round 0 ถึง 5 เท่านั้น</div>
               <div>เมื่อซื้อระบบจะ Provide Liquidity อัตโนมัติ</div>
               <div>สามารถเทรดได้ใน PancakeSwap หลัง Round 1 จบ</div>
@@ -361,7 +361,7 @@ export default function Home() {
 
             <div className="my-4 text-center">
               <div className="text-3xl mb-3">เพิ่ม 2 เท่า/รอบ</div>
-              <div className="text-xl">ราคาเหรียญ</div>
+              <div className="text-xl">ราคาเหรียญ (ไม่ใช่การรับประกันกำไร)</div>
             </div>
 
             <div className="my-4 text-center">
