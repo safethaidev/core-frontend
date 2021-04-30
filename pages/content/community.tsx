@@ -10,51 +10,51 @@ const FACEBOOK_PAGES = [
   //   title: "Blockchain The New Gen",
   //   href: "https://www.facebook.com/BlockchainNewGen",
   // },
-  {
-    img: "/img/content/pages/blockchainreview.jpg",
-    title: "Blockchain Review",
-    href: "https://www.facebook.com/blockchainreviewth",
-  },
-  {
-    img: "/img/content/pages/siamblockchain.png",
-    title: "Siam Blockchain",
-    href: "https://www.facebook.com/siamblockchain"
-  },
-  {
-    img: "/img/content/pages/kim.jpg",
-    title: "Kim DeFi Daddy",
-    href: "https://www.facebook.com/kimdefidaddy",
-  },
-  {
-    img: "/img/content/pages/bit.png",
-    title: "Bit Investment",
-    href: "https://www.facebook.com/bitinvestmentth",
-  },
-  {
-    img: "/img/content/pages/bitcoinaddict.png",
-    title: "Bitcoin Addict",
-    href: "https://www.facebook.com/bitcoinaddictthailand",
-  },
-  {
-    img: "/img/content/pages/bittoon.jpg",
-    title: "BitToon",
-    href: "https://www.facebook.com/bittoonfunny",
-  },
-  {
-    img: "/img/content/pages/nftthai.png",
-    title: "NFT Thai Community",
-    href: "https://www.facebook.com/NFT.Thai.Community",
-  },
-  {
-    img: "/img/content/pages/cryptobobo.jpg",
-    title: "Crypto โบโบ้",
-    href: "https://www.facebook.com/Cryptobobo",
-  },
-  {
-    img: "/img/content/persons/poramin.jpg",
-    title: "ปรมินทร์ อินโสม",
-    href: "https://www.facebook.com/InsomPoramin"
-  },
+  // {
+  //   img: "/img/content/pages/blockchainreview.jpg",
+  //   title: "Blockchain Review",
+  //   href: "https://www.facebook.com/blockchainreviewth",
+  // },
+  // {
+  //   img: "/img/content/pages/siamblockchain.png",
+  //   title: "Siam Blockchain",
+  //   href: "https://www.facebook.com/siamblockchain"
+  // },
+  // {
+  //   img: "/img/content/pages/kim.jpg",
+  //   title: "Kim DeFi Daddy",
+  //   href: "https://www.facebook.com/kimdefidaddy",
+  // },
+  // {
+  //   img: "/img/content/pages/bit.png",
+  //   title: "Bit Investment",
+  //   href: "https://www.facebook.com/bitinvestmentth",
+  // },
+  // {
+  //   img: "/img/content/pages/bitcoinaddict.png",
+  //   title: "Bitcoin Addict",
+  //   href: "https://www.facebook.com/bitcoinaddictthailand",
+  // },
+  // {
+  //   img: "/img/content/pages/bittoon.jpg",
+  //   title: "BitToon",
+  //   href: "https://www.facebook.com/bittoonfunny",
+  // },
+  // {
+  //   img: "/img/content/pages/nftthai.png",
+  //   title: "NFT Thai Community",
+  //   href: "https://www.facebook.com/NFT.Thai.Community",
+  // },
+  // {
+  //   img: "/img/content/pages/cryptobobo.jpg",
+  //   title: "Crypto โบโบ้",
+  //   href: "https://www.facebook.com/Cryptobobo",
+  // },
+  // {
+  //   img: "/img/content/persons/poramin.jpg",
+  //   title: "ปรมินทร์ อินโสม",
+  //   href: "https://www.facebook.com/InsomPoramin"
+  // },
 ]
 
 const FACEBOOK_GROUPS = [
@@ -101,56 +101,56 @@ const FACEBOOK_GROUPS = [
 ]
 
 const INFLUENCERS = [
-  {
-    img: "/img/content/persons/blockchainreview.png",
-    title: "Peeraphat Hankongkaew",
-    href: "https://www.facebook.com/bueakhan.peeraphat"
-  },
-  {
-    img: "/img/content/persons/kim.png",
-    title: "Kim DeFi Daddy",
-    href: "https://www.facebook.com/kimdefidaddy",
-  },
-  {
-    img: "/img/content/persons/bit.png",
-    title: "Bit Investment",
-    href: "https://www.facebook.com/bitinvestmentth"
-  },
-  {
-    img: "/img/content/persons/piriya.png",
-    title: "Piriya Sambandaraksa",
-    href: "https://www.facebook.com/piriya33"
-  },
-  {
-    img: "/img/content/persons/eddie.png",
-    title: "Eddie Paradorn",
-    href: "https://www.facebook.com/eddie.paradorn"
-  },
-  {
-    img: "/img/content/persons/niran.png",
-    title: "Niran Pravithana",
-    href: "https://www.facebook.com/niranpr"
-  },
-  {
-    img: "/img/content/persons/sanjay.png",
-    title: "สัญชัย ปอปลี",
-    href: "https://www.facebook.com/SanjayPopli.23"
-  },
-  {
-    img: "/img/content/persons/top.png",
-    title: "ท๊อป จิรายุส",
-    href: "https://www.facebook.com/toppjirayutofficial"
-  },
-  {
-    img: "/img/content/persons/tonhor.png",
-    title: "TonHor Palakorn",
-    href: "https://www.facebook.com/tonhor"
-  },
-  {
-    img: "/img/content/persons/poramin.jpg",
-    title: "ปรมินทร์ อินโสม",
-    href: "https://www.facebook.com/InsomPoramin"
-  },
+  // {
+  //   img: "/img/content/persons/blockchainreview.png",
+  //   title: "Peeraphat Hankongkaew",
+  //   href: "https://www.facebook.com/bueakhan.peeraphat"
+  // },
+  // {
+  //   img: "/img/content/persons/kim.png",
+  //   title: "Kim DeFi Daddy",
+  //   href: "https://www.facebook.com/kimdefidaddy",
+  // },
+  // {
+  //   img: "/img/content/persons/bit.png",
+  //   title: "Bit Investment",
+  //   href: "https://www.facebook.com/bitinvestmentth"
+  // },
+  // {
+  //   img: "/img/content/persons/piriya.png",
+  //   title: "Piriya Sambandaraksa",
+  //   href: "https://www.facebook.com/piriya33"
+  // },
+  // {
+  //   img: "/img/content/persons/eddie.png",
+  //   title: "Eddie Paradorn",
+  //   href: "https://www.facebook.com/eddie.paradorn"
+  // },
+  // {
+  //   img: "/img/content/persons/niran.png",
+  //   title: "Niran Pravithana",
+  //   href: "https://www.facebook.com/niranpr"
+  // },
+  // {
+  //   img: "/img/content/persons/sanjay.png",
+  //   title: "สัญชัย ปอปลี",
+  //   href: "https://www.facebook.com/SanjayPopli.23"
+  // },
+  // {
+  //   img: "/img/content/persons/top.png",
+  //   title: "ท๊อป จิรายุส",
+  //   href: "https://www.facebook.com/toppjirayutofficial"
+  // },
+  // {
+  //   img: "/img/content/persons/tonhor.png",
+  //   title: "TonHor Palakorn",
+  //   href: "https://www.facebook.com/tonhor"
+  // },
+  // {
+  //   img: "/img/content/persons/poramin.jpg",
+  //   title: "ปรมินทร์ อินโสม",
+  //   href: "https://www.facebook.com/InsomPoramin"
+  // },
 ];
 
 export default function Community() {
