@@ -5,11 +5,11 @@ import Link from "next/link"
 import SafeThaiOfficial from "../../components/SafeThaiOfficial"
 
 const FACEBOOK_PAGES = [
-  {
-    img: "/img/content/pages/newgen.jpg",
-    title: "Blockchain The New Gen",
-    href: "https://www.facebook.com/BlockchainNewGen",
-  },
+  // {
+  //   img: "/img/content/pages/newgen.jpg",
+  //   title: "Blockchain The New Gen",
+  //   href: "https://www.facebook.com/BlockchainNewGen",
+  // },
   {
     img: "/img/content/pages/blockchainreview.jpg",
     title: "Blockchain Review",

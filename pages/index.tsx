@@ -6,11 +6,11 @@ import SafeThaiOfficial from '../components/SafeThaiOfficial';
 import TimelineItem from '../components/TimelineItem'
 
 const PREVIEW_CONTENT = [
-  {
-    img: "/img/content/pages/newgen.jpg",
-    title: "Blockchain The New Gen",
-    href: "https://www.facebook.com/BlockchainNewGen",
-  },
+  // {
+  //   img: "/img/content/pages/newgen.jpg",
+  //   title: "Blockchain The New Gen",
+  //   href: "https://www.facebook.com/BlockchainNewGen",
+  // },
   {
     img: "/img/content/pages/blockchainreview.jpg",
     title: "Blockchain Review",
