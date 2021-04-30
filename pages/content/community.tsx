@@ -183,12 +183,12 @@ export default function Community() {
         </div>
       </div>
 
-      <div className="my-16">
+      {/* <div className="my-16">
         <div className="text-2xl mb-8 text-yellow-200">บุคคลสำคัญ</div>
         <div>
           <AvatarLinkList items={INFLUENCERS}></AvatarLinkList>
         </div>
-      </div>
+      </div> */}
 
       <div className="my-16">
         <div className="text-2xl mb-8 text-yellow-200">มีบางอย่างขาดหายไป ?</div>
