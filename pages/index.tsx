@@ -246,7 +246,7 @@ export default function Home() {
             <div className="mb-8">
               <div className="text-lg mb-1">เปิดขายผ่าน PancakeSwap</div>
               <div className="mb-2">เมษายน 2564</div>
-              <div>ราคาขึ้นอย่างน้อย 2x จากการขายรอบ 0 แน่นอน!</div>
+              <div>เป็นไปตามกลไกตลาด</div>
             </div>
           </TimelineItem>
 
