@@ -58,12 +58,12 @@ export default function Home() {
             </div>
 
             <div className="text-4xl text-center mb-2 text-yellow-200">SafeThai - ช่วย Defi ไทยใบนี้ไว้</div>
-            <div className="text-2xl text-center mb-2 text-yellow-200">Defi Venture Capital สำหรับคนไทย</div>
+            {/* <div className="text-2xl text-center mb-2 text-yellow-200">Defi Venture Capital สำหรับคนไทย</div>
             <div className="text-2xl text-center mb-4 text-yellow-200">และเป็นแหล่งรวมคอนเทนต์ต่างๆของคนไทย</div>
             <div className="text-xl text-center mb-1">Buy &amp; HODL SafeThai ตอนนี้</div>
             <div className="text-xl text-center mb-1">SafeThai ลงทุนในโปรเจคใหม่คนไทย</div>
             <div className="text-xl text-center mb-1">โปรเจคเหล่านั้นให้ผลตอบแทนแก่คนที่ HODL</div>
-            <div className="text-xl text-center mb-1">ทุกครั้งที่มีการเทรดจะมีเงินกองทุนมากขึ้น</div>
+            <div className="text-xl text-center mb-1">ทุกครั้งที่มีการเทรดจะมีเงินกองทุนมากขึ้น</div> */}
           </div>
 
           {/* <div className="flex flex-col items-center my-5">
