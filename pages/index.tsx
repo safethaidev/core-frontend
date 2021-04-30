@@ -29,12 +29,12 @@ const PREVIEW_CONTENT = [
 ];
 
 const SPONSORED_CONTENT = [
-  {
-    img: "/img/content/pages/newgen.jpg",
-    title: "Blockchain The New Gen",
-    href: "https://www.facebook.com/BlockchainNewGen",
-    description: "เนื่องจากมีการนำเนื้อหาในเพจมาใช้",
-  }
+  // {
+  //   img: "/img/content/pages/newgen.jpg",
+  //   title: "Blockchain The New Gen",
+  //   href: "https://www.facebook.com/BlockchainNewGen",
+  //   description: "เนื่องจากมีการนำเนื้อหาในเพจมาใช้",
+  // }
 ];
 
 export default function Home() {
