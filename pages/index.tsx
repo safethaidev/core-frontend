@@ -67,12 +67,12 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center my-5">
-            <div className="text-2xl my-3 text-yellow-200">Round 0</div>
+            <div className="text-2xl my-3 text-yellow-200">Round 1</div>
 
             <div className="my-3 text-center text-xl">
               <div>100,000,000 MSafeThai</div>
-              <div>12.5 BNB</div>
-              <div>ได้เหรียญภายในหนึ่งวันหลังจากเปิด Round 1</div>
+              <div>25 BNB</div>
+              <div>Round 1 ภายในสัปดาห์หน้า เร็วสุดเสาร์นี้</div>
             </div>
 
             <div className="my-4 text-center">
