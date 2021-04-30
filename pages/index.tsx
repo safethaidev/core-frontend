@@ -66,7 +66,7 @@ export default function Home() {
             <div className="text-xl text-center mb-1">ทุกครั้งที่มีการเทรดจะมีเงินกองทุนมากขึ้น</div>
           </div>
 
-          <div className="flex flex-col items-center my-5">
+          {/* <div className="flex flex-col items-center my-5">
             <div className="text-2xl my-3 text-yellow-200">Round 1</div>
 
             <div className="my-3 text-center text-xl">
@@ -81,6 +81,27 @@ export default function Home() {
               <div>เมื่อซื้อระบบจะ Provide Liquidity อัตโนมัติ</div>
               <div>สามารถเทรดได้ใน PancakeSwap หลัง Round 1 จบ</div>
             </div>
+          </div> */}
+
+          <div className="flex flex-col items-center my-5">
+            <div className="text-3xl my-3 text-yellow-200">ประกาศ</div>
+
+            <div className="my-3 text-center text-xl">
+              <div>ผู้ที่ถูก SafeThai พูดถึงทุกคนไม่มีส่วนเกี่ยวข้องกับการพัฒนา SafeThai ใดๆทั้งสิ้น</div>
+              <div>ทาง SafeThai ต้องขออภัยมา ณ ที่นี้ด้วย</div>
+              <div>และจะมีการปรับปรุงทิศทางของพัฒนาเพื่อไม่ให้เกิดเหตุการณ์เช่นนี้อีก</div>
+            </div>
+
+            <div className="my-4 text-center">
+              <a className="underline" href="https://www.facebook.com/SafeThaiFinance/posts/109012454671790">อ่านแถลงการณ์ฉบับเป็นทางการ</a>
+            </div>
+
+            {/* <div className="my-4 text-center">
+              <div>ราคาเพิ่มขึ้น 2 เท่า ทุกรอบ (ไม่ใช่การการันตีผลตอนแทน)</div>
+              <div>มีตั้งแต่ Round 0 ถึง 5 เท่านั้น</div>
+              <div>เมื่อซื้อระบบจะ Provide Liquidity อัตโนมัติ</div>
+              <div>สามารถเทรดได้ใน PancakeSwap หลัง Round 1 จบ</div>
+            </div> */}
           </div>
 
           {/* <div className="flex flex-col items-center my-5">
