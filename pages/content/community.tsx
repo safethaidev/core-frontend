@@ -58,46 +58,46 @@ const FACEBOOK_PAGES = [
 ]
 
 const FACEBOOK_GROUPS = [
-  {
-    img: "/img/content/groups/newgendefi.jpg",
-    title: "New Gen Defi Society",
-    href: "https://www.facebook.com/groups/1738492826331671",
-  },
-  {
-    img: "/img/content/groups/bitcoinaddict.png",
-    title: "Bitcoin Addict Community",
-    href: "https://www.facebook.com/groups/cryptoaddict",
-  },
-  {
-    img: "/img/content/groups/defikanmai.jpg",
-    title: "defi กันไหมวัยรุ่น",
-    href: "https://www.facebook.com/groups/899570467532460",
-  },
-  {
-    img: "/img/content/groups/nft.jpg",
-    title: "NFT and Crypto Art Thailand",
-    href: "https://www.facebook.com/groups/1112704465822065",
-  },
-  {
-    img: "/img/content/groups/safemoonthailand.jpg",
-    title: "SAFE_MOON_THAILAND",
-    href: "https://www.facebook.com/groups/305524347587484",
-  },
-  {
-    img: "/img/content/groups/cryptonews.jpg",
-    title: "CRYPTO NEWS THAILAND",
-    href: "https://www.facebook.com/groups/301888907999466",
-  },
-  {
-    img: "/img/content/groups/polkadotthailand.jpg",
-    title: "Polkadot​ thailand",
-    href: "https://www.facebook.com/groups/967887583615100",
-  },
-  {
-    img: "/img/content/groups/shitcointhailand.jpg",
-    title: "SHITCOIN THAILAND",
-    href: "https://www.facebook.com/groups/274853860929455",
-  },
+  // {
+  //   img: "/img/content/groups/newgendefi.jpg",
+  //   title: "New Gen Defi Society",
+  //   href: "https://www.facebook.com/groups/1738492826331671",
+  // },
+  // {
+  //   img: "/img/content/groups/bitcoinaddict.png",
+  //   title: "Bitcoin Addict Community",
+  //   href: "https://www.facebook.com/groups/cryptoaddict",
+  // },
+  // {
+  //   img: "/img/content/groups/defikanmai.jpg",
+  //   title: "defi กันไหมวัยรุ่น",
+  //   href: "https://www.facebook.com/groups/899570467532460",
+  // },
+  // {
+  //   img: "/img/content/groups/nft.jpg",
+  //   title: "NFT and Crypto Art Thailand",
+  //   href: "https://www.facebook.com/groups/1112704465822065",
+  // },
+  // {
+  //   img: "/img/content/groups/safemoonthailand.jpg",
+  //   title: "SAFE_MOON_THAILAND",
+  //   href: "https://www.facebook.com/groups/305524347587484",
+  // },
+  // {
+  //   img: "/img/content/groups/cryptonews.jpg",
+  //   title: "CRYPTO NEWS THAILAND",
+  //   href: "https://www.facebook.com/groups/301888907999466",
+  // },
+  // {
+  //   img: "/img/content/groups/polkadotthailand.jpg",
+  //   title: "Polkadot​ thailand",
+  //   href: "https://www.facebook.com/groups/967887583615100",
+  // },
+  // {
+  //   img: "/img/content/groups/shitcointhailand.jpg",
+  //   title: "SHITCOIN THAILAND",
+  //   href: "https://www.facebook.com/groups/274853860929455",
+  // },
 ]
 
 const INFLUENCERS = [

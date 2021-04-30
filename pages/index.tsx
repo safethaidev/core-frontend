@@ -11,21 +11,21 @@ const PREVIEW_CONTENT = [
   //   title: "Blockchain The New Gen",
   //   href: "https://www.facebook.com/BlockchainNewGen",
   // },
-  {
-    img: "/img/content/pages/blockchainreview.jpg",
-    title: "Blockchain Review",
-    href: "https://www.facebook.com/blockchainreviewth",
-  },
-  {
-    img: "/img/content/groups/defikanmai.jpg",
-    title: "defi กันไหมวัยรุ่น",
-    href: "https://www.facebook.com/groups/899570467532460",
-  },
-  {
-    img: "/img/content/groups/nft.jpg",
-    title: "NFT and Crypto Art Thailand",
-    href: "https://www.facebook.com/groups/1112704465822065",
-  },
+  // {
+  //   img: "/img/content/pages/blockchainreview.jpg",
+  //   title: "Blockchain Review",
+  //   href: "https://www.facebook.com/blockchainreviewth",
+  // },
+  // {
+  //   img: "/img/content/groups/defikanmai.jpg",
+  //   title: "defi กันไหมวัยรุ่น",
+  //   href: "https://www.facebook.com/groups/899570467532460",
+  // },
+  // {
+  //   img: "/img/content/groups/nft.jpg",
+  //   title: "NFT and Crypto Art Thailand",
+  //   href: "https://www.facebook.com/groups/1112704465822065",
+  // },
 ];
 
 const SPONSORED_CONTENT = [
