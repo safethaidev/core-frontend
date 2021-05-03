@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div className="px-2">
       <Head>
-        <title>SafeThai - ช่วย Defi ไทยใบนี้ไว้ - Defi Venture Capital สำหรับคนไทย</title>
+        <title>SafeThai - Defi ไทยต้องก้าวไกลระดับโลก - Defi Venture Capital สำหรับคนไทย</title>
       </Head>
 
       {/* Introduction block */}
@@ -57,7 +57,7 @@ export default function Home() {
               }}></img>
             </div>
 
-            <div className="text-4xl text-center mb-2 text-yellow-200">SafeThai - ช่วย Defi ไทยใบนี้ไว้</div>
+            <div className="text-4xl text-center mb-2 text-yellow-200">SafeThai - Defi ไทยต้องก้าวไกลระดับโลก</div>
             <div className="text-2xl text-center mb-2 text-yellow-200">Defi Venture Capital สำหรับคนไทย</div>
             <div className="text-2xl text-center mb-4 text-yellow-200">และเป็นแหล่งรวมคอนเทนต์ต่างๆของคนไทย</div>
             <div className="text-xl text-center mb-1">Buy &amp; HODL SafeThai ตอนนี้</div>
@@ -432,7 +432,7 @@ export default function Home() {
 
       <div className="text-center my-4 text-white">
         <div className="text-lg mb-2">สามารถส่งข้อความมาถามที่</div>
-        <div className="text-lg mb-2"><a className="underline" href="https://www.facebook.com/SafeThaiFinance" target="_blank">Inbox ของเพจ SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></div>
+        <div className="text-lg mb-2"><a className="underline" href="https://www.facebook.com/SafeThaiFinance" target="_blank">Inbox ของเพจ SafeThai - Defi ไทยต้องก้าวไกลระดับโลก</a></div>
         <div className="text-lg mb-4">ก่อนเปิดขาย Round 1</div>
         <div className="text-lg mb-4">นอกจากนั้นถ้าหาก Dev ว่างจะมานั่งคุยใน <a className="underline" href="https://discord.gg/3nzFyJq6gd" target="_blank">Voice channel ใน Discord</a> ด้วย</div>
       </div>

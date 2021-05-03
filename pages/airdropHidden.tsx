@@ -11,7 +11,7 @@ export default function Airdrop(props) {
 
   const HeadSection = (
     <Head>
-      <title>SafeThai - แจก Airdrop เพื่อช่วย Defi ไทยใบนี้ไว้</title>
+      <title>SafeThai - แจก Airdrop เพื่อDefi ไทยต้องก้าวไกลระดับโลก</title>
     </Head>
   )
 
@@ -51,7 +51,7 @@ export default function Airdrop(props) {
         <div className="text-xl mb-4 text-yellow-200">Facebook (300,000,000 SafeThai)</div>
 
         <ol className="list-decimal px-8">
-          <li>กด Like <a className="underline" href="https://www.facebook.com/SafeThaiFinance/" target="blank">เพจ SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
+          <li>กด Like <a className="underline" href="https://www.facebook.com/SafeThaiFinance/" target="blank">เพจ SafeThai - Defi ไทยต้องก้าวไกลระดับโลก</a></li>
           <li>เข้ากลุ่ม <a className="underline" href="https://www.facebook.com/groups/791619518452583" target="blank">SafeThai Community</a></li>
           <li>แชร์ <a className="underline" href="https://www.facebook.com/SafeThaiFinance/posts/107818658124503" target="blank">โพสนี้</a> แล้วแท็กเพื่อน 3 คน</li>
           <li>Comment ใต้ <a className="underline" href="https://www.facebook.com/SafeThaiFinance/posts/107818658124503" target="blank">โพสนี้</a> โดยบอกสิ่งที่อยากได้จาก SafeThai พร้อมแปะลิ้ง {LinkComponent} เข้าไปต่อท้าย</li>
@@ -62,7 +62,7 @@ export default function Airdrop(props) {
         <div className="text-xl mb-4 text-yellow-200">Twitter (300,000,000 SafeThai)</div>
 
         <ol className="list-decimal px-8">
-          <li>กด Follow <a className="underline" href="https://twitter.com/SafethaiD">Twitter SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
+          <li>กด Follow <a className="underline" href="https://twitter.com/SafethaiD">Twitter SafeThai - Defi ไทยต้องก้าวไกลระดับโลก</a></li>
           <li>Retweet <a className="underline" href="https://twitter.com/SafethaiD/status/1387704101807525895" target="blank">tweet นี้</a> แล้วแท็กเพื่อน 3 คน</li>
           <li>Comment ใต้ <a className="underline" href="https://twitter.com/SafethaiD/status/1387704101807525895" target="blank">tweet นี้</a> โดยบอกสิ่งที่อยากได้จาก SafeThai พร้อมทั้งแปะลิ้ง {LinkComponent} เข้าไปต่อท้าย</li>
         </ol>
@@ -72,7 +72,7 @@ export default function Airdrop(props) {
         <div className="text-xl mb-4 text-yellow-200">Discord (300,000,000 SafeThai)</div>
 
         <ol className="list-decimal px-8">
-          <li>Join <a className="underline" href="https://discord.gg/3nzFyJq6gd" target="blank">Discord SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
+          <li>Join <a className="underline" href="https://discord.gg/3nzFyJq6gd" target="blank">Discord SafeThai - Defi ไทยต้องก้าวไกลระดับโลก</a></li>
           <li>แปะลิ้ง {LinkComponent} ไว้ใน Channel #airdrop</li>
         </ol>
       </div>
@@ -98,7 +98,7 @@ export default function Airdrop(props) {
 
         <ol className="list-decimal px-8">
           <li>เขียนโพสด้วยตนเอง หรือ Copy จากโพสตัวอย่างนี้ ไปแปะในที่ไหนก็ได้ ที่มีสมาชิกอยู่มาก หรือ Comment ใต้โพส 2 โพส หรือ Comment 1 โพส พร้อม Share (เลือกอย่างใดอย่างหนึ่ง หรือทำทั้งหมดก็ได้)</li>
-          <li>ส่งลิ้ง พร้อมแคปหน้าจอ ไปใน Channel #freestyle-airdrop ใน <a className="underline" href="https://discord.gg/3nzFyJq6gd" target="blank">Discord SafeThai - ช่วย Defi ไทยใบนี้ไว้</a></li>
+          <li>ส่งลิ้ง พร้อมแคปหน้าจอ ไปใน Channel #freestyle-airdrop ใน <a className="underline" href="https://discord.gg/3nzFyJq6gd" target="blank">Discord SafeThai - Defi ไทยต้องก้าวไกลระดับโลก</a></li>
         </ol>
       </div> */}
 

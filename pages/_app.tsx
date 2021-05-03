@@ -12,6 +12,9 @@ declare global {
     ethereum: any;
     web3: any;
     web3client: any;
+
+    firebase: any;
+    db: any;
   }
 }
 
@@ -31,7 +34,7 @@ function MyApp({ Component, pageProps }) {
             content="width=device-width, initial-scale=1.0"
           />
           <link rel="icon" href="/safethai.png" />
-          <title>SafeThai - ช่วย Defi ไทยใบนี้ไว้ - Defi Venture Capital สำหรับคนไทย</title>
+          <title>SafeThai - Defi ไทยต้องก้าวไกลระดับโลก - Defi Venture Capital สำหรับคนไทย</title>
           <meta property="og:image"         content="https://safethai.finance/img/cover/fbcover.jpg" key="ogimage" />
 
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
@@ -44,6 +47,37 @@ function MyApp({ Component, pageProps }) {
               gtag('js', new Date());
   
               gtag('config', 'G-C5C63W7XJC');
+              `
+            }}
+          ></script>
+
+          {/* <!-- The core Firebase JS SDK is always required and must be listed first --> */}
+          <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+          {/* <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries --> */}
+          <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+
+          <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                // Your web app's Firebase configuration
+                // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+                var firebaseConfig = {
+                  apiKey: "AIzaSyAkk1Hj5OiyFQl2otRSmwqddvL84WI3Ork",
+                  authDomain: "safethai-26478.firebaseapp.com",
+                  projectId: "safethai-26478",
+                  storageBucket: "safethai-26478.appspot.com",
+                  messagingSenderId: "207141143268",
+                  appId: "1:207141143268:web:9d4609b855b4348b7762f1",
+                  measurementId: "G-6K6SB1E0NB"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+                firebase.analytics();
+
+                window.db = firebase.firestore();
               `
             }}
           ></script>

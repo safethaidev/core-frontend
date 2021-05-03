@@ -11,7 +11,7 @@ export default function Airdrop(props) {
 
   const HeadSection = (
     <Head>
-      <title>SafeThai - แจก Airdrop เพื่อช่วย Defi ไทยใบนี้ไว้</title>
+      <title>SafeThai - แจก Airdrop เพื่อDefi ไทยต้องก้าวไกลระดับโลก</title>
     </Head>
   )
 

@@ -55,7 +55,7 @@ export default function Round0(props) {
   return (
     <div className="text-white">
       <Head>
-        <title>SafeThai - ซื้อเหรียญต้นน้ำ เพื่อช่วย Defi ไทยใบนี้ไว้</title>
+        <title>SafeThai - ซื้อเหรียญต้นน้ำ เพื่อDefi ไทยต้องก้าวไกลระดับโลก</title>
       </Head>
 
       <div className="flex flex-col items-center my-4">

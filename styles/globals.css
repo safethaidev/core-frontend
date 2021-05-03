@@ -14,3 +14,7 @@ body {
 .hover-opacity:hover {
   opacity: 0.8;
 }
+
+li {
+  margin-bottom: 8px;
+}
