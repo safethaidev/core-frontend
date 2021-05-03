@@ -143,8 +143,8 @@ const ROUND0 = {
   "0xfaa9fd4bc6c0c4f79a80802caa24c587d3f1f420": 0.1,
   "0xfb2e123b5e3983601ffb8f8b15862e0e24f38ed2": 0.055,
   "0xfd9e3157ee540a353708233f66f14b5080aef791": 0.01,
-  "0xffcf879dba2f74bab95a8a75b4d58c8ac11e20b6": 0.015
-}
+  "0xffcf879dba2f74bab95a8a75b4d58c8ac11e20b6": 0.015,
+};
 
 async function signMsg(msgParams, from) {
   return await web3.eth.personal.sign(msgParams, from, "safethai");
@@ -153,6 +153,7 @@ async function signMsg(msgParams, from) {
 export default function Home() {
   const [round1Ended, setRound1Ended] = useState(false);
   const { account, active } = useWeb3React();
+  let round0Amount = ROUND0[account ? account.toLowerCase() : ""];
 
   return (
     <div className="md:px-8">
@@ -224,7 +225,9 @@ export default function Home() {
 
       <div className="bg-gray-800 text-white">
         <div className="container mx-auto pt-8 md:pt-12">
-          <div className="text-center text-3xl mb-4 text-yellow-200">การตัดสินใจ</div>
+          <div className="text-center text-3xl mb-4 text-yellow-200">
+            การตัดสินใจ
+          </div>
         </div>
       </div>
 
@@ -232,88 +235,118 @@ export default function Home() {
         <div className="flex flex-row my-3 justify-center">
           <ConnectWalletButton></ConnectWalletButton>
         </div>
-      ) : (
-        ROUND0[account] ?
+      ) : round0Amount ? (
         <div>
-          <div className="text-center my-3 text-xl">คุณสนับสนุน ${ROUND0[account]} BNB</div>
-        <div className="flex flex-col md:flex-row my-3 justify-center">
-          <button
-            className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
-            onClick={async () => {
-              try {
-                if (!confirm("คุณจะได้รับเงินคืนภายใน 3 วัน และคุณเข้าใจว่าเป็นการสละสิทธิ์การได้รับเหรียญของคุณ")) return;
+          <div className="text-center my-3 text-xl text-white">
+            คุณสนับสนุน {round0Amount} BNB
+          </div>
+          <div className="flex flex-col md:flex-row my-3 justify-center">
+            <button
+              className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
+              onClick={async () => {
+                try {
+                  if (
+                    !confirm(
+                      "คุณจะได้รับเงินคืนภายใน 3 วัน และคุณเข้าใจว่าเป็นการสละสิทธิ์การได้รับเหรียญของคุณ"
+                    )
+                  )
+                    return;
 
-                let amount = prompt("กรุณาระบุจำนวนเงินที่ต้องการขอคืน ในหน่วย BNB (ทั้งหมด " + ROUND0[account] + " BNB)");
-                if (!parseFloat(amount)) {
-                  alert("กรุณาใส่จำนวนเงินให้ถูกต้อง");
-                  return;
+                  let amount = prompt(
+                    "กรุณาระบุจำนวนเงินที่ต้องการขอคืน ในหน่วย BNB (ทั้งหมด " +
+                      round0Amount +
+                      " BNB)"
+                  );
+                  if (!parseFloat(amount)) {
+                    alert("กรุณาใส่จำนวนเงินให้ถูกต้อง");
+                    return;
+                  }
+
+                  if (parseFloat(amount) > round0Amount) {
+                    alert("คุณขอคืนมากกว่าที่คุณสนับสนุนไป");
+                    return;
+                  }
+
+                  let signature = await signMsg("Refund " + amount, account);
+                  console.log(signature);
+
+                  await window.db
+                    .collection("refund")
+                    .doc(account)
+                    .set({
+                      refundAmount: parseFloat(amount),
+                      address: account,
+                      signature,
+                    });
+
+                  alert("ขอคืนเงินสำเร็จ คุณจะได้รับเงินคืนภายใน 3 วัน");
+                } catch (err) {
+                  console.error(err);
+                  alert(
+                    "เกิดข้อผิดพลาดในการขอคืนเงิน กรุณาติดต่อทาง Inbox ของเพจ SafeThai"
+                  );
                 }
-                
-                if (parseFloat(amount) > ROUND0[account]) {
-                  alert("คุณขอคืนมากกว่าที่คุณสนับสนุนไป");
-                  return;
+              }}
+            >
+              <div>ขอคืนเงิน</div>
+            </button>
+
+            <button
+              className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
+              onClick={async () => {
+                try {
+                  if (
+                    !confirm(
+                      "คุณได้ทราบว่าทาง SafeThai จะมีการพัฒนา Branding ซึ่งต้องใช้เวลามากขึ้นในการออกเหรียญ และได้ศึกษาและยอมรับความเสี่ยงต่างๆที่ได้ระบุไว้ในรายละเอียดเพิ่มเติม"
+                    )
+                  )
+                    return;
+
+                  let signature = await signMsg("Support", account);
+                  console.log(signature);
+
+                  await window.db.collection("refund").doc(account).set({
+                    refundAmount: 0,
+                    address: account,
+                    signature,
+                  });
+
+                  alert(
+                    "ทางผู้พัฒนาขอขอบคุณทุกท่านที่ให้ความไว้วางใจและสนับสนุนโครงการ SafeThai ในครั้งนี้ครับ"
+                  );
+                } catch (err) {
+                  console.error(err);
+                  alert(
+                    "เกิดข้อผิดพลาดในการขอคืนเงิน กรุณาติดต่อทาง Inbox ของเพจ SafeThai"
+                  );
                 }
-  
-                let signature = await signMsg("Refund " + amount, account);
-                console.log(signature);
-  
-                await window.db.collection("refund").doc(account).set({
-                  refundAmount: parseFloat(amount),
-                  address: account,
-                  signature
-                })
+              }}
+            >
+              <div>สนับสนุนต่อ</div>
+            </button>
+          </div>
 
-                alert("ขอคืนเงินสำเร็จ คุณจะได้รับเงินคืนภายใน 3 วัน")
-              } catch (err) {
-                console.error(err);
-                alert("เกิดข้อผิดพลาดในการขอคืนเงิน กรุณาติดต่อทาง Inbox ของเพจ SafeThai")
-              }
-            }}
-          >
-            <div>ขอคืนเงิน</div>
-          </button>
 
-          <button
-            className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
-            onClick={async () => {
-              try {
-                if (!confirm("คุณได้ทราบว่าทาง SafeThai จะมีการพัฒนา Branding ซึ่งต้องใช้เวลามากขึ้นในการออกเหรียญ และได้ศึกษาและยอมรับความเสี่ยงต่างๆที่ได้ระบุไว้ในรายละเอียดเพิ่มเติม")) return;
+          <div className="my-4 text-white text-center">
+            จะมีการขอ Sign Signature Request ซึ่งไม่เสียค่าใช้จ่ายใดๆ
+          </div>
 
-                let signature = await signMsg("Support", account);
-                console.log(signature);
-  
-                await window.db.collection("refund").doc(account).set({
-                  refundAmount: 0,
-                  address: account,
-                  signature
-                })
+          <div className="my-4 text-white text-center">
+            เมื่อคุณทำการกดขอคืนเงิน หรือสนับสนุนต่อ หมายความว่าคุณได้อ่าน
+            เข้าใจและยอมรับ
+            <Link href="/detail">
+              <span className="underline">รายละเอียดเพิ่มเติม</span>
+            </Link>
+          </div>
 
-                alert("ทางผู้พัฒนาขอขอบคุณทุกท่านที่ให้ความไว้วางใจและสนับสนุนโครงการ SafeThai ในครั้งนี้ครับ")
-              } catch (err) {
-                console.error(err);
-                alert("เกิดข้อผิดพลาดในการขอคืนเงิน กรุณาติดต่อทาง Inbox ของเพจ SafeThai")
-              }
-            }}
-          >
-            <div>สนับสนุนต่อ</div>
-          </button>
+          <div className="my-4 text-white text-center">
+            ทางผู้พัฒนาขอขอบคุณทุกท่านที่ให้ความไว้วางใจและสนับสนุนโครงการ SafeThai
+            ในครั้งนี้ครับ
+          </div>
         </div>
-        </div>
-        : <div className="my-3 text-xl text-center">คุณไม่ได้เป็นผู้สนับสนุน</div>
+      ) : (
+        <div className="my-4 text-xl text-center text-white">คุณไม่ได้เป็นผู้สนับสนุน</div>
       )}
-
-      <div className="my-4 text-white text-center">
-        จะมีการขอ Sign Signature Request ซึ่งไม่เสียค่าใช้จ่ายใดๆ
-      </div>
-
-      <div className="my-4 text-white text-center">
-        เมื่อคุณทำการกดขอคืนเงิน หรือสนับสนุนต่อ หมายความว่าคุณได้อ่าน เข้าใจและยอมรับ<Link href="/detail"><span className="underline">รายละเอียดเพิ่มเติม</span></Link>
-      </div>
-
-      <div className="my-4 text-white text-center">
-        ทางผู้พัฒนาขอขอบคุณทุกท่านที่ให้ความไว้วางใจและสนับสนุนโครงการ SafeThai
-        ในครั้งนี้ครับ
-      </div>
 
       <SafeThaiOfficial></SafeThaiOfficial>
     </div>
