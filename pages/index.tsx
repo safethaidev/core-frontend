@@ -2,6 +2,7 @@ import { useWeb3React } from "@web3-react/core";
 import Head from "next/head";
 import Link from "next/link";
 import React, { useState } from "react";
+import AvatarLink from "../components/AvatarLink";
 import AvatarLinkList from "../components/AvatarLinkList";
 import ConnectWalletButton from "../components/ConnectWalletButton";
 import SafeThaiOfficial from "../components/SafeThaiOfficial";
@@ -37,6 +38,30 @@ const SPONSORED_CONTENT = [
     title: "Blockchain The New Gen",
     href: "https://www.facebook.com/BlockchainNewGen",
     description: "เนื่องจากมีการนำเนื้อหาในเพจมาใช้",
+  },
+];
+
+const PORTFOLIO = [
+  {
+    img: "https://storage.googleapis.com/techsauce-prod/ugc/uploads/2021/3/%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%A7%E0%B8%B1%E0%B8%A5%E0%B8%A3%E0%B8%AD%E0%B8%87%E0%B8%8A%E0%B8%99%E0%B8%B0%E0%B9%80%E0%B8%A5%E0%B8%B4%E0%B8%A8%E0%B8%AD%E0%B8%B1%E0%B8%99%E0%B8%94%E0%B8%B1%E0%B8%9A_2_%E0%B8%97%E0%B8%B5%E0%B8%A1_Estate-Onblock.JPG",
+    title: "SCB 10X Bangkok Blockathon",
+    href: "https://techsauce.co/pr-news/scb-10x-bangkok-blockathon-2021-killswitch",
+    description: "เป็นผู้พัฒนา Smart Contract ในทีม Estate-Onblock ซึ่งได้ที่ 3 ในงานแข่งขันนี้",
+    largeImg: true,
+  },
+  {
+    img: "/img/content/portfolio/olympic.jpg",
+    title: "13th Thailand Olympiad in Informatics (TOI)",
+    href: "https://www.facebook.com/oho.ipst/posts/d41d8cd9/1518337468231130/",
+    description: "ได้รับรางวัลเหรียญเงิน ในการแข่งขันโอลิมปิกคอมพิวเตอร์ระดับชาติครั้งที่ 13",
+    largeImg: true,
+  },
+  {
+    img: "/img/content/portfolio/chatbot.jpg",
+    title: "13th FSTT Chatbot Competition",
+    href: "https://contest.thaifstt.org/",
+    description: "ได้รับรางวัลชนะเลิศในการแข่งขันสร้าง Chatbot ในโครงการค้นหาสุดยอดฝีมือโทรคมนาคมและไอซีทีเทิดพระเกียรติ ครั้งที่ 13",
+    largeImg: true,
   },
 ];
 
@@ -155,8 +180,12 @@ export default function Home() {
   const { account, active } = useWeb3React();
   let round0Amount = ROUND0[account ? account.toLowerCase() : ""];
 
+  async function refreshRefund() {
+
+  }
+
   return (
-    <div className="md:px-8">
+    <div className="container mx-auto px-4">
       <Head>
         <title>SafeThai - ประกาศสำคัญ</title>
       </Head>
@@ -192,23 +221,38 @@ export default function Home() {
 
       {/* Announcement */}
       <div className="mt-2 text-white text-center">
-        <div className="my-3">
+        <div className="my-3 text-lg">
           SafeThai เปิดโอกาสให้ผู้ที่ไม่ต้องการสนับสนุนแล้วสามารถขอเงินคืนได้
           ตั้งแต่ตอนนี้ ถึงวันที่ 5 พฤษภาคม 2564 เวลา 21:00
+        </div>
+
+        <div className="my-3">
           โดยเป้าหมายหลักของทีมผู้พัฒนานั้นต้องการรักษาผลประโยชน์ให้กับผู้ลงทุนที่พร้อมสนับสนุนโปรเจคของเรา
           ทางทีม SafeThai ได้ทำการวิเคราะห์แล้วพบว่า Branding
           นั้นยังทำได้ไม่ดีพอ
           จึงส่งผลให้ยังไม่ได้รับการตอบรับที่ดีพอในด้านความน่าเชื่อถือ
+        </div>
+
+        <div className="my-3 text-lg">
           แต่ทั้งนี้ทางทีมผู้พัฒนามิได้มีเจตนาในการทอดทิ้งโปรเจค
           แต่จะทำการปรับปรุงในด้านต่างๆ โดยเฉพาะอย่างยิ่งด้าน Branding
           แล้วจึงทำการปล่อยเหรียญออกมาอีกครั้ง
           เพื่อรักษาผลประโยชน์ให้แก่ผู้ลงทุน
-          ไม่ต้องมาแบกรับความเสี่ยงที่ไม่สามารถคาดการณ์ได้ในอนาคต ตอนนี้ทาง
-          SafeThai ได้รับการสนับสนุนโปรเจคทั้งหมดตอนนี้เป็นจำนวน 13.333 BNB
+          ไม่ต้องมาแบกรับความเสี่ยงที่ไม่สามารถคาดการณ์ได้ในอนาคต
+        </div>
+
+        <div className="my-3">
+          ตอนนี้ทาง SafeThai ได้รับการสนับสนุนโปรเจคทั้งหมดตอนนี้เป็นจำนวน 13.333 BNB
+        </div>
+
+        <div className="my-3">
           โดยถ้าหากมีผู้ขอคืนเงินจนเหลือต่ำกว่า 7 BNB
-          ทางผู้พัฒนาจะทำการคืนเงินให้กับผู้สนับสนุนทุกคน แต่ถ้าเหลืออย่างน้อย 7
-          BNB ทางทีมผู้พัฒนาจะทำการปรับปรุง Branding ให้เร็วที่สุด
-          และจะมีการปล่อยเหรียญออกมาอีกครั้ง หลังจากที่ได้ทำการปรับปรุง Branding
+          ทางผู้พัฒนาจะทำการคืนเงินให้กับผู้สนับสนุนทุกคนภายในวันที่ 9 พฤษภาคม เว้นแต่ว่าผู้สนับสนุนท่านนั้นจะแสดงเจตจำนงอย่างชัดเจนว่าจะไม่ขอคืนเงิน ภายในวันที่ 7 พฤษภาคม เวลา 21:00 ซึ่งถือเป็นการสนับสนุนโดยที่ไม่หวังผลตอบแทน 
+        </div>
+
+        <div className="my-3">
+        แต่ถ้าเหลืออย่างน้อย 7
+          BNB ทางทีมผู้พัฒนาจะทำการปรับปรุง Branding ให้เร็วที่สุด และจะมีการปล่อยเหรียญออกมาอีกครั้ง หลังจากที่ได้ทำการปรับปรุง Branding
           และพัฒนาระบบเสร็จสิ้นแล้ว ซึ่งจำเป็นต้องใช้เวลามาก และต้องเลื่อนการเปิดเหรียญในวันที่ 9 พฤษภาคม ออกไปอย่างไม่มีกำหนด
         </div>
 
@@ -277,7 +321,10 @@ export default function Home() {
                       refundAmount: parseFloat(amount),
                       address: account,
                       signature,
+                      date: new Date(),
                     });
+
+                  await refreshRefund();
 
                   alert("ขอคืนเงินสำเร็จ คุณจะได้รับเงินคืนภายใน 3 วัน");
                 } catch (err) {
@@ -297,7 +344,7 @@ export default function Home() {
                 try {
                   if (
                     !confirm(
-                      "คุณได้ทราบว่าทาง SafeThai จะมีการพัฒนา Branding ซึ่งต้องใช้เวลามากขึ้นในการออกเหรียญ และได้ศึกษาและยอมรับความเสี่ยงต่างๆที่ได้ระบุไว้ในรายละเอียดเพิ่มเติม"
+                      "คุณได้ทราบว่าทาง SafeThai จะมีการพัฒนา Branding และพัฒนาระบบให้สมบูรณ์แบบ และมีความน่าเชื่อถือมากก่อนออกเหรียญ ซึ่งต้องใช้เวลามาก ทั้งนี้จำเป็นต้องเลื่อนการเปิดเหรียญในวันที่ 9 พฤษภาคม ออกไปอย่างไม่มีกำหนด และได้ศึกษาและยอมรับความเสี่ยงต่างๆที่ได้ระบุไว้ในรายละเอียดเพิ่มเติม"
                     )
                   )
                     return;
@@ -309,7 +356,10 @@ export default function Home() {
                     refundAmount: 0,
                     address: account,
                     signature,
+                    date: new Date(),
                   });
+
+                  await refreshRefund();
 
                   alert(
                     "ทางผู้พัฒนาขอขอบคุณทุกท่านที่ให้ความไว้วางใจและสนับสนุนโครงการ SafeThai ในครั้งนี้ครับ"
@@ -327,7 +377,7 @@ export default function Home() {
           </div>
 
           <div className="my-4 text-white text-center">
-            จะมีการขอ Sign Signature Request ซึ่งไม่เสียค่าใช้จ่ายใดๆ
+            จะมีการขอ Sign Signature Request เพื่อป้องกันการปลอมแปลง และแอบอ้าง จากผู้ไม่หวังดี ซึ่งไม่เสียค่าใช้จ่ายใดๆ
           </div>
 
           <div className="my-4 text-white text-center">
@@ -348,6 +398,46 @@ export default function Home() {
           คุณไม่ได้เป็นผู้สนับสนุน
         </div>
       )}
+
+      <div className="bg-gray-800 text-white">
+        <div className="container mx-auto pt-8 md:pt-12">
+          <div className="text-center text-3xl mb-4 text-yellow-200">
+            ผู้พัฒนา SafeThai
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-row my-3 mt-12 justify-center text-white">
+        <AvatarLink 
+          title="ชมธน ฉันจรัสวิชัย"
+          href="https://www.facebook.com/chomtana.chanjaratvichai"
+          img="/chomtana.jpg"
+          description="นิสิตจุฬาลงกรณ์มหาวิทยาลัย มีความตั้งใจที่จะทำสิ่งที่ดีให้แก่โลกใบนี้ โดยที่ไม่ได้มีเจตนาจะหลอกลวงใครทั้งสิ้น และจะยังคงดำเนินการพัฒนาต่อไปเรื่อยๆ โดยจะนำเอาประสบการณ์ที่ได้รับในครั้งนี้มาปรับปรุงเพื่อให้โปรเจคออกมาดีที่สุด"
+          largeImg={true}
+        ></AvatarLink>
+      </div>
+
+      <div className="bg-gray-800 text-white">
+        <div className="container mx-auto pt-8 md:pt-12">
+          <div className="text-center text-3xl mb-4 text-yellow-200">
+            ผลงานสำคัญ
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-row my-3 mt-12 justify-center text-white">
+        <AvatarLinkList
+          items={PORTFOLIO}
+        ></AvatarLinkList>
+      </div>
+
+      <div className="flex flex-row my-3 mt-8 justify-center text-white">
+        <a href="https://chom.dev/" target="blank">
+          <button className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center">
+            <div>ดูผลงานเพิ่มเติม</div>
+          </button>
+        </a>
+      </div>
 
       <SafeThaiOfficial></SafeThaiOfficial>
     </div>

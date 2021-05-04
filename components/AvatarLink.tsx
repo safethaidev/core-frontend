@@ -10,6 +10,7 @@ export default function AvatarLink({
   refHref = "#",
   target = "blank",
   description = "",
+  largeImg = false,
 }) {
   return (
     <div>
@@ -19,12 +20,12 @@ export default function AvatarLink({
             className="rounded-full mb-4"
             src={img}
             style={{
-              width: DESKTOP_SIZE,
-              height: DESKTOP_SIZE,
+              width: DESKTOP_SIZE * (largeImg ? 2 : 1),
+              height: DESKTOP_SIZE * (largeImg ? 2 : 1),
               objectFit: "cover",
             }}
           ></img>
-          <div className="text-xl text-center mb-1">{title}</div>
+          <div className="text-xl text-center my-2">{title}</div>
           {description && <div className="text-center mb-1">{description}</div>}
           {/* {href && href != "#" && (
             <button className="bg-white hover:bg-gray-100 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 mt-3 text-lg">
