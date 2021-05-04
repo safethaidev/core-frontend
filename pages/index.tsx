@@ -165,7 +165,7 @@ export default function Home() {
       <div className="bg-gray-800">
         <div className="container mx-auto my-12 p-4 text-white">
           <div className="mb-4">
-            <div className="flex justify-center mb-12">
+            {/* <div className="flex justify-center mb-12">
               <img
                 src="/safethai.png"
                 style={{
@@ -173,7 +173,7 @@ export default function Home() {
                   height: 240,
                 }}
               ></img>
-            </div>
+            </div> */}
 
             <div className="text-4xl text-center mb-2 text-yellow-200">
               SafeThai - Defi ไทยต้องก้าวไกลระดับโลก
@@ -206,10 +206,10 @@ export default function Home() {
           ไม่ต้องมาแบกรับความเสี่ยงที่ไม่สามารถคาดการณ์ได้ในอนาคต ตอนนี้ทาง
           SafeThai ได้รับการสนับสนุนโปรเจคทั้งหมดตอนนี้เป็นจำนวน 13.333 BNB
           โดยถ้าหากมีผู้ขอคืนเงินจนเหลือต่ำกว่า 7 BNB
-          ทางผู้พัฒนาจะไม่ทำการออกเหรียญ SafeThai
-          และเปิดให้สมัครใจคืนเงินไปเรื่อยๆ แต่ถ้าเหลืออย่างน้อย 7 BNB
-          ทางทีมผู้พัฒนาจะทำการปรับปรุง Branding ให้เร็วที่สุด
-          และจะมีการปล่อยเหรียญออกมาอีกครั้ง
+          ทางผู้พัฒนาจะทำการคืนเงินให้กับผู้สนับสนุนทุกคน แต่ถ้าเหลืออย่างน้อย 7
+          BNB ทางทีมผู้พัฒนาจะทำการปรับปรุง Branding ให้เร็วที่สุด
+          และจะมีการปล่อยเหรียญออกมาอีกครั้ง หลังจากที่ได้ทำการปรับปรุง Branding
+          และพัฒนาระบบเสร็จสิ้นแล้ว ซึ่งจำเป็นต้องใช้เวลามาก
         </div>
 
         <div className="my-4 text-xl">Defi ไทยต้องก้าวไกลระดับโลก</div>
@@ -326,7 +326,6 @@ export default function Home() {
             </button>
           </div>
 
-
           <div className="my-4 text-white text-center">
             จะมีการขอ Sign Signature Request ซึ่งไม่เสียค่าใช้จ่ายใดๆ
           </div>
@@ -340,12 +339,14 @@ export default function Home() {
           </div>
 
           <div className="my-4 text-white text-center">
-            ทางผู้พัฒนาขอขอบคุณทุกท่านที่ให้ความไว้วางใจและสนับสนุนโครงการ SafeThai
-            ในครั้งนี้ครับ
+            ทางผู้พัฒนาขอขอบคุณทุกท่านที่ให้ความไว้วางใจและสนับสนุนโครงการ
+            SafeThai ในครั้งนี้ครับ
           </div>
         </div>
       ) : (
-        <div className="my-4 text-xl text-center text-white">คุณไม่ได้เป็นผู้สนับสนุน</div>
+        <div className="my-4 text-xl text-center text-white">
+          คุณไม่ได้เป็นผู้สนับสนุน
+        </div>
       )}
 
       <SafeThaiOfficial></SafeThaiOfficial>

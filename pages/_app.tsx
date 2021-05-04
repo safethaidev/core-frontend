@@ -33,9 +33,9 @@ function MyApp({ Component, pageProps }) {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <link rel="icon" href="/safethai.png" />
+          <link rel="icon" href="/safethaifix.png" />
           <title>SafeThai - Defi ไทยต้องก้าวไกลระดับโลก - Defi Venture Capital สำหรับคนไทย</title>
-          <meta property="og:image"         content="https://safethai.finance/img/cover/fbcover.jpg" key="ogimage" />
+          <meta property="og:image"         content="https://safethai.finance/img/cover/fbcovernew.jpg" key="ogimage" />
 
           {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5C63W7XJC"></script>
