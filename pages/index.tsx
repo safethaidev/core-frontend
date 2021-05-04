@@ -1,7 +1,7 @@
 import { useWeb3React } from "@web3-react/core";
 import Head from "next/head";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AvatarLink from "../components/AvatarLink";
 import AvatarLinkList from "../components/AvatarLinkList";
 import ConnectWalletButton from "../components/ConnectWalletButton";
@@ -180,9 +180,21 @@ export default function Home() {
   const { account, active } = useWeb3React();
   let round0Amount = ROUND0[account ? account.toLowerCase() : ""];
 
-  async function refreshRefund() {
+  const [refundStatus, setRefundStatus] = useState(-1);
 
+  async function refreshRefund() {
+    if (active) {
+      let snapshot = await window.db.collection("refund").doc(account).get();
+
+      if (snapshot.exists) {
+        setRefundStatus(snapshot.data().refundAmount);
+      }
+    }
   }
+
+  useEffect(() => {
+    refreshRefund();
+  }, [account])
 
   return (
     <div className="container mx-auto px-4">
@@ -286,7 +298,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row my-3 justify-center">
             <button
-              className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
+              className={"text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center " + (refundStatus > 0 ? "bg-yellow-200" : "bg-white")}
               onClick={async () => {
                 try {
                   if (
@@ -335,11 +347,11 @@ export default function Home() {
                 }
               }}
             >
-              <div>ขอคืนเงิน</div>
+              <div>ขอคืนเงิน {refundStatus > 0 ? refundStatus + " BNB" : ""}</div>
             </button>
 
             <button
-              className="bg-white hover:bg-gray-200 text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center"
+              className={"text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center " + (refundStatus == 0 ? "bg-green-200" : "bg-white")}
               onClick={async () => {
                 try {
                   if (
