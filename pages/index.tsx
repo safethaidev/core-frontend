@@ -300,7 +300,12 @@ export default function Home() {
           <div className="text-center my-3 text-xl text-white">
             คุณสนับสนุน {round0Amount} BNB
           </div>
-          <div className="flex flex-col md:flex-row my-3 justify-center">
+
+          <div className="text-center my-3 text-xl text-white">
+            ปิดรับการขอคืนเงินแล้ว
+          </div>
+      
+          <div className="flex flex-col md:flex-row my-3 justify-center" style={{pointerEvents: "none", opacity: 0.3}}>
             <button
               className={"text-black px-12 py-2 rounded mx-2 w-100 sm:w-auto my-2 text-xl text-center " + (refundStatus > 0 ? "bg-yellow-200" : "bg-white")}
               onClick={async () => {
